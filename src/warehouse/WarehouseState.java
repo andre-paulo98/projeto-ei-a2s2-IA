@@ -20,18 +20,34 @@ public class WarehouseState extends State implements Cloneable {
 
     public WarehouseState(int[][] matrix) {
         this.matrix = new int[matrix.length][matrix.length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                this.matrix[i][j] = matrix[i][j];
+                if (this.matrix[i][j] == Properties.AGENT) {
+                    lineAgent = i;
+                    columnAgent = j;
+
+                    lineExit = i;
+                    columnExit = j;
+                }
+            }
+        }
+    }
+
+    public WarehouseState(int[][] matrix, int lineExit, int columnExit) {
+        this.matrix = new int[matrix.length][matrix.length];
+        this.lineExit = lineExit;
+        this.columnExit = columnExit;
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 this.matrix[i][j] = matrix[i][j];
-                if (this.matrix[i][j] == 0) {
-                    lineBlank = i;
-                    columnBlank = j;
+                if (this.matrix[i][j] == Properties.AGENT) {
+                    lineAgent = i;
+                    columnAgent = j;
                 }
             }
         }
-        // TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
     }
 
     public void executeAction(Action action) {
@@ -40,10 +56,8 @@ public class WarehouseState extends State implements Cloneable {
 
     public void executeActionSimulation(Action action) {
         action.execute(this);
-        // TODO
-        // steps ++
+        steps++;
         fireUpdatedEnvironment();
-        throw new UnsupportedOperationException("Not implemented yet."); // delete after implementing
     }
 
 
@@ -85,18 +99,17 @@ public class WarehouseState extends State implements Cloneable {
 
     public void moveUp() {
         matrix[lineAgent][columnAgent] = Properties.EMPTY;
-        matrix[++lineAgent][columnAgent] = Properties.AGENT;
+        matrix[--lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void moveRight() {
         matrix[lineAgent][columnAgent] = Properties.EMPTY;
         matrix[lineAgent][++columnAgent] = Properties.AGENT;
-
     }
 
     public void moveDown() {
         matrix[lineAgent][columnAgent] = Properties.EMPTY;
-        matrix[--lineAgent][columnAgent] = Properties.AGENT;
+        matrix[++lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public void moveLeft() {
@@ -108,7 +121,7 @@ public class WarehouseState extends State implements Cloneable {
         matrix[lineAgent][columnAgent] = Properties.EMPTY;
         columnAgent = column;
         lineAgent = line;
-        matrix[columnAgent][lineAgent] = Properties.AGENT;
+        matrix[lineAgent][columnAgent] = Properties.AGENT;
     }
 
     public int getSteps() {
@@ -184,8 +197,7 @@ public class WarehouseState extends State implements Cloneable {
 
     @Override
     public WarehouseState clone() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        return new WarehouseState(matrix, lineExit, columnExit);
     }
 
     private final ArrayList<EnvironmentListener> listeners = new ArrayList<>();
@@ -204,6 +216,14 @@ public class WarehouseState extends State implements Cloneable {
         for (EnvironmentListener listener : listeners) {
             listener.environmentUpdated();
         }
+    }
+
+    public int getLineExit() {
+        return lineExit;
+    }
+
+    public int getColumnExit() {
+        return columnExit;
     }
 
 }
