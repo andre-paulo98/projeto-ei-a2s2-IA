@@ -11,6 +11,7 @@ public class WarehouseState extends State implements Cloneable {
 
     //TODO this class might require the definition of additional methods and/or attributes
 
+    // ver a classe EightPuzzleState do projeto Search
     private int[][] matrix;
     private int lineAgent, columnAgent;
     private int lineExit;
@@ -18,63 +19,88 @@ public class WarehouseState extends State implements Cloneable {
     private int steps;
 
     public WarehouseState(int[][] matrix) {
-        //TODO
+        this.matrix = new int[matrix.length][matrix.length];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                this.matrix[i][j] = matrix[i][j];
+                if (this.matrix[i][j] == 0) {
+                    lineBlank = i;
+                    columnBlank = j;
+                }
+            }
+        }
+        // TODO
         throw new UnsupportedOperationException("Not implemented yet.");
     }
 
     public void executeAction(Action action) {
         action.execute(this);
-        // TODO
-        throw new UnsupportedOperationException("Not implemented yet."); // delete after implementing
     }
 
     public void executeActionSimulation(Action action) {
         action.execute(this);
         // TODO
-
+        // steps ++
         fireUpdatedEnvironment();
         throw new UnsupportedOperationException("Not implemented yet."); // delete after implementing
     }
 
 
     public boolean canMoveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        //nao sair fora da matrix
+        //nao ter uma shelf em cima
+        return lineAgent - 1 >= 0 && matrix[lineAgent - 1][columnAgent] != Properties.SHELF;
     }
 
     public boolean canMoveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        //nao sair fora da matrix
+        //nao ter uma shelf a direita
+        return columnAgent + 1 < getSize() && matrix[lineAgent][columnAgent + 1] != Properties.SHELF;
+        /*if (columnAgent + 1 < getSize() && matrix[lineAgent][columnAgent + 1] != Properties.SHELF) {
+            return true;
+        }
+        return false;*/
     }
 
     public boolean canMoveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        //nao sair fora da matrix
+        //nao ter uma shelf a baixo
+        /*if (lineAgent + 1 < getSize() && matrix[lineAgent + 1][columnAgent] != Properties.SHELF) {
+            return true;
+        }
+        return false;*/
+        return lineAgent + 1 < getSize() && matrix[lineAgent + 1][columnAgent] != Properties.SHELF;
     }
 
     public boolean canMoveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        //nao sair fora da matrix
+        //nao ter uma shelf a esquerda
+        /*if (columnAgent - 1 >= 0 && matrix[lineAgent][columnAgent - 1] != Properties.SHELF) {
+            return true;
+        }
+        return false;*/
+        return columnAgent - 1 >= 0 && matrix[lineAgent][columnAgent - 1] != Properties.SHELF;
     }
 
     public void moveUp() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        matrix[lineAgent+1][columnAgent] = Properties.AGENT;
+        matrix[lineAgent][columnAgent] = Properties.EMPTY;
     }
 
     public void moveRight() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        matrix[lineAgent][columnAgent+1] = Properties.AGENT;
+        matrix[lineAgent][columnAgent] = Properties.EMPTY;
     }
 
     public void moveDown() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        matrix[lineAgent-1][columnAgent] = Properties.AGENT;
+        matrix[lineAgent][columnAgent] = Properties.EMPTY;
     }
 
     public void moveLeft() {
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        matrix[lineAgent][columnAgent-1] = Properties.AGENT;
+        matrix[lineAgent][columnAgent] = Properties.EMPTY;
     }
 
     public void setCellAgent(int line, int column) {

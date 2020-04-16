@@ -6,6 +6,7 @@ public class HeuristicWarehouse extends Heuristic<WarehouseProblemForSearch, War
     @Override
     public double compute(WarehouseState state){
         //TODO
+
         throw new UnsupportedOperationException("Not implemented yet.");
     }
 
