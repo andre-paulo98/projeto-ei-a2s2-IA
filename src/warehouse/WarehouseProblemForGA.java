@@ -35,7 +35,7 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         //TODO
 
 
-        return "Alguritmo genetico";
+        return "Algoritmo genético";
     }
 
 }
