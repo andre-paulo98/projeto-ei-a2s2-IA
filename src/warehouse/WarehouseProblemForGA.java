@@ -38,4 +38,42 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         return "Algoritmo genético";
     }
 
+    public static LinkedList<Cell> getShelves() {
+        return shelves;
+    }
+
+    public static Cell getCellAgent() {
+        return cellAgent;
+    }
+
+    public static Cell getExit() {
+        return exit;
+    }
+
+    public static ArrayList<Request> getRequests() {
+        return requests;
+    }
+
+    public static int getNumProducts() {
+        return numProducts;
+    }
+
+    public static LinkedList<Pair> getPairs() {
+        return pairs;
+    }
+
+    public static int getValuePairs(Cell cell1, Cell cell2) {
+        for (Pair pair : pairs) {
+            if (pair.getCell1().equals(cell1) && pair.getCell2().equals(cell2))
+                return pair.getValue();
+            else if (pair.getCell2().equals(cell1) && pair.getCell1().equals(cell2))
+                return pair.getValue();
+        }
+        return 0;
+    }
+
+    public static Cell getShelfCell(int pos) {
+        return shelves.get(pos);
+    }
+
 }
