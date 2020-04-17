@@ -9,8 +9,6 @@ import java.util.Arrays;
 
 public class WarehouseState extends State implements Cloneable {
 
-    //TODO this class might require the definition of additional methods and/or attributes
-
     // ver a classe EightPuzzleState do projeto Search
     private int[][] matrix;
     private int lineAgent, columnAgent;

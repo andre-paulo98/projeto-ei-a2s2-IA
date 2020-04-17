@@ -33,11 +33,7 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     @Override
     public double computeFitness() {
-        //TODO
         fitness = 0;
-        //WarehouseIndividual a = problem.getNewIndividual();
-        //LinkedList<Pair> pairs = WarehouseProblemForGA.getPairs();
-        //ArrayList<Request> req = WarehouseProblemForGA.getRequests();
 
         Cell agent = WarehouseProblemForGA.getCellAgent();
         Cell exit = WarehouseProblemForGA.getExit();
@@ -45,21 +41,14 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         for (Request request: WarehouseProblemForGA.getRequests()) {
             for(int produto : request.getRequest()) {
                 Cell shelf = WarehouseProblemForGA.getShelfCell(getShelfPos(genome, produto));
-                System.out.println(shelf.toString());
                 int value = WarehouseProblemForGA.getValuePairs(agent, shelf);
                 fitness += value;
                 agent = shelf; // TODO Verificar se o agente deveria de atualizar sozinho
-                System.out.println(value);
             }
             fitness += WarehouseProblemForGA.getValuePairs(agent, exit);
             agent = exit; // TODO Verificar se o agente deveria de atualizar sozinho
         }
-
-
-
-
         return fitness;
-        //throw new UnsupportedOperationException("Not implemented yet.");
     }
 
     public static int getShelfPos(int[] genome, int value) {
@@ -73,8 +62,15 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     //Return the product Id if the shelf in cell [line, column] has some product and 0 otherwise
     public int getProductInShelf(int line, int column){
-        //TODO
-        throw new UnsupportedOperationException("Not implemented yet.");
+        Cell shelf = new Cell(line,column);
+        int i = 0;
+        for (Cell cell: WarehouseProblemForGA.getShelves()) {
+            if (shelf.equals(cell)){
+                return genome[i];
+            }
+            i++;
+        }
+        return 0;
     }
 
     @Override
@@ -87,7 +83,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
             sb.append(genome[i]).append(" ");
             //this method might require changes
         }
-
         return sb.toString();
     }
 
