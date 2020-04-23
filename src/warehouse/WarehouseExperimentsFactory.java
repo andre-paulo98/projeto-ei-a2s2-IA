@@ -50,7 +50,7 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
         switch (getParameterValue("Recombination")) {
             case "pmx":
                 recombination = new RecombinationPartialMapped<>(recombinationProbability);
-                break;
+                break; // TODO  procurar na net: crossover premutation problem
             case "TODO1": //TODO
                 recombination = new Recombination3<>(recombinationProbability);
                 break;

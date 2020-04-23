@@ -43,10 +43,10 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
                 Cell shelf = WarehouseProblemForGA.getShelfCell(getShelfPos(genome, produto));
                 int value = WarehouseProblemForGA.getValuePairs(agent, shelf);
                 fitness += value;
-                agent = shelf; // TODO Verificar se o agente deveria de atualizar sozinho
+                agent = shelf;
             }
             fitness += WarehouseProblemForGA.getValuePairs(agent, exit);
-            agent = exit; // TODO Verificar se o agente deveria de atualizar sozinho
+            agent = exit;
         }
         return fitness;
     }
@@ -66,7 +66,8 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         int i = 0;
         for (Cell cell: WarehouseProblemForGA.getShelves()) {
             if (shelf.equals(cell)){
-                return genome[i];
+                if(genome[i] <= problem.getNumProducts())
+                    return genome[i];
             }
             i++;
         }
@@ -80,7 +81,10 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         sb.append(fitness);
         sb.append("\npath: ");
         for (int i = 0; i < genome.length; i++) {
-            sb.append(genome[i]).append(" ");
+            if(genome[i] <= problem.getNumProducts())
+                sb.append(genome[i]).append(" ");
+            else
+                sb.append("0").append(" ");
             //this method might require changes
         }
         return sb.toString();

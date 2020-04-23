@@ -3,6 +3,7 @@ package warehouse;
 import ga.Problem;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
@@ -14,6 +15,7 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     private static ArrayList<Request> requests;
     private static int numProducts;
     private static LinkedList<Pair> pairs;
+    private static HashMap<String, Integer> pairsHash = new HashMap<>();
 
     public WarehouseProblemForGA(WarehouseAgentSearch agentSearch) {
         shelves = WarehouseAgentSearch.getShelves();
@@ -22,6 +24,10 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         requests = WarehouseAgentSearch.getRequests();
         numProducts = WarehouseAgentSearch.getNumProducts();
         pairs = agentSearch.getPairs();
+
+        for (Pair p: pairs) {
+            pairsHash.put(p.getHash(), p.getValue());
+        }
 
     }
 
@@ -32,9 +38,6 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
     @Override
     public String toString() {
-        //TODO
-
-
         return "Algoritmo genético";
     }
 
@@ -58,16 +61,14 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         return numProducts;
     }
 
-    public static LinkedList<Pair> getPairs() {
-        return pairs;
-    }
-
     public static int getValuePairs(Cell cell1, Cell cell2) {
-        for (Pair pair : pairs) {
-            if (pair.getCell1().equals(cell1) && pair.getCell2().equals(cell2))
-                return pair.getValue();
-            else if (pair.getCell2().equals(cell1) && pair.getCell1().equals(cell2))
-                return pair.getValue();
+        Pair pair = new Pair(cell1, cell2);
+        if(pairsHash.containsKey(pair.getHash())) {
+            return pairsHash.get(pair.getHash());
+        }
+        pair = new Pair(cell2, cell1);
+        if(pairsHash.containsKey(pair.getHash())) {
+            return pairsHash.get(pair.getHash());
         }
         return 0;
     }
@@ -75,5 +76,7 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     public static Cell getShelfCell(int pos) {
         return shelves.get(pos);
     }
+
+
 
 }
