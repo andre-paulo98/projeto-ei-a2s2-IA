@@ -60,14 +60,10 @@ public class WarehouseState extends State implements Cloneable {
 
 
     public boolean canMoveUp() {
-        //nao sair fora da matrix
-        //nao ter uma shelf em cima
         return lineAgent - 1 >= 0 && matrix[lineAgent - 1][columnAgent] != Properties.SHELF;
     }
 
     public boolean canMoveRight() {
-        //nao sair fora da matrix
-        //nao ter uma shelf a direita
         return columnAgent + 1 < getSize() && matrix[lineAgent][columnAgent + 1] != Properties.SHELF;
         /*if (columnAgent + 1 < getSize() && matrix[lineAgent][columnAgent + 1] != Properties.SHELF) {
             return true;
@@ -76,8 +72,6 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public boolean canMoveDown() {
-        //nao sair fora da matrix
-        //nao ter uma shelf a baixo
         /*if (lineAgent + 1 < getSize() && matrix[lineAgent + 1][columnAgent] != Properties.SHELF) {
             return true;
         }
@@ -86,8 +80,6 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public boolean canMoveLeft() {
-        //nao sair fora da matrix
-        //nao ter uma shelf a esquerda
         /*if (columnAgent - 1 >= 0 && matrix[lineAgent][columnAgent - 1] != Properties.SHELF) {
             return true;
         }
