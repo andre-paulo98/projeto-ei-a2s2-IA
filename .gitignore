@@ -25,3 +25,5 @@
 hs_err_pid*
 
 .idea/
+
+out/production/ProjWarehouse/META-INF/ProjWarehouse.kotlin_module
