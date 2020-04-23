@@ -16,15 +16,22 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         super(problem, size);
         this.problem = problem;
 
+        ArrayList<Integer> valuesNotInGenome = new ArrayList<>();
+        int minValue, maxValue;
+        for (int i = 0; i < size; i++) {
+            valuesNotInGenome.add(i+1);
+        }
+
         int i = 0, random;
         do {
-            random = GeneticAlgorithm.random.nextInt(size) + 1;
+            minValue = valuesNotInGenome.get(0); maxValue = valuesNotInGenome.get(valuesNotInGenome.size()-1);
+            random = GeneticAlgorithm.random.nextInt((maxValue - minValue) + 1) + minValue;
             if(!existsInGenome(random)) {
+                valuesNotInGenome.remove((Integer)random);
                 genome[i] = random;
                 i++;
             }
         } while(i < size);
-
     }
 
     public WarehouseIndividual(WarehouseIndividual original) {
