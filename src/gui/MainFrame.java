@@ -269,6 +269,8 @@ public class MainFrame extends JFrame implements GAListener {
                 return;
             }
 
+            problemGA.startTime();
+
             bestIndividualPanel.textArea.setText("");
             seriesBestIndividual.clear();
             seriesAverage.clear();

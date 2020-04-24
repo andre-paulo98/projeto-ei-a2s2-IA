@@ -38,7 +38,6 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
         numRuns = Integer.parseInt(getParameterValue("Runs"));
         populationSize = Integer.parseInt(getParameterValue("Population size"));
         maxGenerations = Integer.parseInt(getParameterValue("Max generations"));
-
         //SELECTION 
         if (getParameterValue("Selection").equals("tournament")) {
             int tournamentSize = Integer.parseInt(getParameterValue("Tournament size"));

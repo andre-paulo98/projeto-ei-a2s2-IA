@@ -17,7 +17,6 @@ public class WarehouseAgentSearch<S extends State> extends Agent<S> {
     private static ArrayList<Request> requests;
     private static int numProducts;
     private static LinkedList<Pair> pairs;
-    // TODO trocar a lista de Pairs para HashMap
 
     public WarehouseAgentSearch(S environment) {
         super(environment);

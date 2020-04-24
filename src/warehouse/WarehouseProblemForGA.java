@@ -2,9 +2,12 @@ package warehouse;
 
 import ga.Problem;
 
+import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.concurrent.TimeUnit;
 
 public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
@@ -16,6 +19,8 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     private static int numProducts;
     private static LinkedList<Pair> pairs;
     private static HashMap<String, Integer> pairsHash = new HashMap<>();
+
+    private static long startTime;
 
     public WarehouseProblemForGA(WarehouseAgentSearch agentSearch) {
         shelves = WarehouseAgentSearch.getShelves();
@@ -77,6 +82,20 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         return shelves.get(pos);
     }
 
+    public static void startTime() {
+        startTime = System.nanoTime();
+    }
+
+    public static String getTimeElapsed() {
+        long mili = (System.nanoTime() - startTime) / 1000000;
+        if(mili < 1000)
+            return mili + " ms";
+        if(mili < 1000 * 60)
+            return mili / 1000.0 + " s";
+        else
+            return Math.round(mili / 1000.0 / 60.0 * 100.0)/100.0 + " min";
+        //if(mili < 1000 * 60 * 60)
+    }
 
 
 }

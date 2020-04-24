@@ -12,6 +12,8 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     //TODO this class might require the definition of additional methods and/or attributes
     private WarehouseProblemForGA problem;
 
+    private long lastElapsedTime;
+
     public WarehouseIndividual(WarehouseProblemForGA problem, int size) {
         super(problem, size);
         this.problem = problem;
@@ -84,9 +86,9 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
             if(genome[i] <= problem.getNumProducts())
                 sb.append(genome[i]).append(" ");
             else
-                sb.append("0").append(" ");
-            //this method might require changes
+                sb.append("0 ");
         }
+        sb.append("\ntime: ").append(problem.getTimeElapsed());
         return sb.toString();
     }
 
