@@ -51,11 +51,11 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
             case "pmx":
                 recombination = new RecombinationPartialMapped<>(recombinationProbability);
                 break; // TODO  procurar na net: crossover premutation problem
-            case "TODO1": //TODO
-                recombination = new Recombination3<>(recombinationProbability);
+            case "ox1": //TODO
+                recombination = new RecombinationOrderOperator<>(recombinationProbability);
                 break;
             case "TODO2": //TODO
-                recombination = new Recombination2<>(recombinationProbability);
+                recombination = new Recombination3<>(recombinationProbability);
                 break;
         }
 

@@ -117,7 +117,7 @@ public class PanelParameters extends PanelAtributesValue {
             case 1:
                 return new Recombination3<>(recombinationProb);
             case 2:
-                return new Recombination2<>(recombinationProb);
+                return new RecombinationOrderOperator<>(recombinationProb);
         }
         return null;
     }
