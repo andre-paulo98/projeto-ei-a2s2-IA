@@ -49,12 +49,12 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
         switch (getParameterValue("Recombination")) {
             case "pmx":
                 recombination = new RecombinationPartialMapped<>(recombinationProbability);
-                break; // TODO  procurar na net: crossover premutation problem
-            case "ox1": //TODO
+                break;
+            case "ox1":
                 recombination = new RecombinationOrderOperator<>(recombinationProbability);
                 break;
-            case "TODO2": //TODO
-                recombination = new Recombination3<>(recombinationProbability);
+            case "cx":
+                recombination = new RecombinationCycle<>(recombinationProbability);
                 break;
         }
 

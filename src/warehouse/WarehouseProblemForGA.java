@@ -11,7 +11,6 @@ import java.util.concurrent.TimeUnit;
 
 public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
-    //TODO this class might require the definition of additional methods and/or attributes
     private static LinkedList<Cell> shelves;
     private static Cell cellAgent;
     private static Cell exit;

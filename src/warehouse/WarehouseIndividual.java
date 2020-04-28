@@ -9,7 +9,6 @@ import java.util.LinkedList;
 
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
-    //TODO this class might require the definition of additional methods and/or attributes
     private WarehouseProblemForGA problem;
 
     private long lastElapsedTime;
