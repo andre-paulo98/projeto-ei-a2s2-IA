@@ -87,6 +87,10 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
         stopped = true;
     }
 
+    public static int randomNumber(int min, int max) {
+        return random.nextInt(max - min) + min;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
