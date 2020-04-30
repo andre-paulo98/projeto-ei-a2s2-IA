@@ -61,9 +61,7 @@ public class RecombinationCycle<I extends IntVectorIndividual, P extends Problem
                 }
             }
             clearIndice();
-
         }
-
     }
 
     private int lengthVisitedIndices() {
