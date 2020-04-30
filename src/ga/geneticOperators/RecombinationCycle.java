@@ -57,7 +57,7 @@ public class RecombinationCycle<I extends IntVectorIndividual, P extends Problem
                         }
                     }
                 }
-            insertVisited(indice);
+                insertVisited(indice);
             }
             idx = (indice[0]+1)% length;
             while (verifyVisited(idx) && lengthVisitedIndices() < length){
