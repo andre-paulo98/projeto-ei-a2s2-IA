@@ -11,8 +11,6 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     private WarehouseProblemForGA problem;
 
-    private long lastElapsedTime;
-
     public WarehouseIndividual(WarehouseProblemForGA problem, int size) {
         super(problem, size);
         this.problem = problem;
@@ -30,7 +28,7 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     public WarehouseIndividual(WarehouseIndividual original) {
         super(original);
-    } // TODO perguntar a professora para continuar a ter o problem
+    }
 
     @Override
     public double computeFitness() {

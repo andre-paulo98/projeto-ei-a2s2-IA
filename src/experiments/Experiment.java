@@ -52,10 +52,6 @@ public class Experiment <E extends ExperimentsFactory, P extends Problem>{
         return experimentValues;
     }
 
-    public WarehouseProblemForGA getProblema () {
-        return (WarehouseProblemForGA) problem;
-    }
-
     //listeners
     final private List<ExperimentListener> listeners = new ArrayList<>(10);
 

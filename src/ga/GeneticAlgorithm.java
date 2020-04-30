@@ -20,6 +20,7 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
     private int t;
     private boolean stopped;
     private I bestInRun;
+    private double startTime;
 
     public GeneticAlgorithm(
             int populationSize,
@@ -38,6 +39,8 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
     }
 
     public I run(P problem) {
+        startTime = System.currentTimeMillis();
+
         t = 0;
         population = new Population<>(populationSize, problem);
         bestInRun = population.evaluate();
@@ -53,13 +56,17 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
             t++;
             fireGenerationEnded(new GAEvent(this));
         }
+        bestInRun.setTempoTotal(System.currentTimeMillis() - startTime);
         fireRunEnded(new GAEvent(this));
+
         return bestInRun;
     }
 
     private void computeBestInRun (I bestInGen){
         if (bestInGen.compareTo(bestInRun) > 0) {
             bestInRun = (I) bestInGen.clone();
+
+            bestInRun.setTempo(System.currentTimeMillis() - startTime);
         }
     }
 

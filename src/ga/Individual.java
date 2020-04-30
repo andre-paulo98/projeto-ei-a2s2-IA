@@ -2,7 +2,7 @@ package ga;
 
 public abstract class Individual<P extends Problem, I extends Individual> implements Comparable<I>{
 
-    protected double fitness;
+    protected double fitness, tempo, tempoTotal;
     protected P problem;
 
     public Individual(P problem) {
@@ -29,5 +29,21 @@ public abstract class Individual<P extends Problem, I extends Individual> implem
 
     public P getProblem() {
         return problem;
+    }
+
+    public double getTempo() {
+        return tempo;
+    }
+
+    public void setTempo(double tempo) {
+        this.tempo = tempo;
+    }
+
+    public double getTempoTotal() {
+        return tempoTotal;
+    }
+
+    public void setTempoTotal(double tempoTotal) {
+        this.tempoTotal = tempoTotal;
     }
 }
