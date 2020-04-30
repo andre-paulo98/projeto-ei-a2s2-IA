@@ -36,6 +36,8 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     public double computeFitness() {
         fitness = 0;
 
+        // TODO trocar a forma de obter os valores dos pares para ser executado aqui (ver se o par está na lista, se não estiver calcular)
+
         Cell agent = WarehouseProblemForGA.getCellAgent();
         Cell exit = WarehouseProblemForGA.getExit();
 
