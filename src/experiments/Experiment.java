@@ -2,6 +2,7 @@ package experiments;
 
 import ga.GeneticAlgorithm;
 import ga.Problem;
+import warehouse.WarehouseProblemForGA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +50,10 @@ public class Experiment <E extends ExperimentsFactory, P extends Problem>{
 
     public String getExperimentValues() {
         return experimentValues;
+    }
+
+    public WarehouseProblemForGA getProblema () {
+        return (WarehouseProblemForGA) problem;
     }
 
     //listeners

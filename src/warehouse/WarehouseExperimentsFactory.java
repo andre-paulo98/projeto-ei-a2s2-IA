@@ -77,6 +77,7 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
         //PROBLEM
 
         problem = new WarehouseProblemForGA(agentSearch);
+        problem.startTime();
 
         String experimentTextualRepresentation = buildExperimentTextualRepresentation();
         String experimentHeader = buildExperimentHeader();

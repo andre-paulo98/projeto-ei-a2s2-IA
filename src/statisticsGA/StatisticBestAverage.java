@@ -4,6 +4,7 @@ import experiments.Experiment;
 import experiments.ExperimentEvent;
 import ga.*;
 import utils.Maths;
+import warehouse.WarehouseProblemForGA;
 
 import java.io.File;
 
@@ -16,7 +17,7 @@ public class StatisticBestAverage<E extends Individual, P extends Problem<E>> im
         values = new double[numRuns];
         File file = new File("statistic_average_fitness.xls");
         if(!file.exists()){
-            utils.FileOperations.appendToTextFile("statistic_average_fitness.xls", experimentHeader + "\t" + "Average:" + "\t" + "StdDev:" + "\r\n");
+            utils.FileOperations.appendToTextFile("statistic_average_fitness.xls", experimentHeader + "\t" + "Average:" + "\t" + "StdDev:" + "\t" + "Time Spent:\r\n");
         }
     }
 
@@ -35,8 +36,10 @@ public class StatisticBestAverage<E extends Individual, P extends Problem<E>> im
         double average = Maths.average(values);
         double sd = Maths.standardDeviation(values, average);
 
-        String experimentConfigurationValues = ((Experiment) e.getSource()).getExperimentValues();
 
-        utils.FileOperations.appendToTextFile("statistic_average_fitness.xls", experimentConfigurationValues + "\t" + average + "\t" + sd + "\r\n");
+        String experimentConfigurationValues = ((Experiment) e.getSource()).getExperimentValues();
+        String timeSpent = ((Experiment) e.getSource()).getProblema().getTimeElapsed();
+
+        utils.FileOperations.appendToTextFile("statistic_average_fitness.xls", experimentConfigurationValues + "\t" + average + "\t" + sd + "\t"+ timeSpent + "\r\n");
     }
 }

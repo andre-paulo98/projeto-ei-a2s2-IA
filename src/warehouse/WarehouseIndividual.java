@@ -30,7 +30,7 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     public WarehouseIndividual(WarehouseIndividual original) {
         super(original);
-    }
+    } // TODO perguntar a professora para continuar a ter o problem
 
     @Override
     public double computeFitness() {
