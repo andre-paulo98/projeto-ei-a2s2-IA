@@ -192,7 +192,7 @@ public class MainFrame extends JFrame implements GAListener {
                 problemPanel.textArea.setText(agentSearch.getEnvironment().toString());
                 problemPanel.textArea.append(agentSearch.showRequests());
                 bestIndividualPanel.textArea.setText("");
-                buttonRunGA.setEnabled(false);
+                buttonRunGA.setEnabled(true);
                 buttonExperiments.setEnabled(false);
                 bestInRun = null;
 
@@ -265,8 +265,9 @@ public class MainFrame extends JFrame implements GAListener {
     public void jButtonRunGA_actionPerformed(ActionEvent e) {
         try {
             if (problemGA == null) {
-                JOptionPane.showMessageDialog(this, "You must first choose a problem", "Error!", JOptionPane.ERROR_MESSAGE);
-                return;
+                problemGA = new WarehouseProblemForGA(agentSearch, null);
+                /*JOptionPane.showMessageDialog(this, "You must first choose a problem", "Error!", JOptionPane.ERROR_MESSAGE);
+                return;*/
             }
 
             problemGA.startTime();

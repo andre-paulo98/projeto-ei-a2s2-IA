@@ -26,15 +26,14 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     }
 
-    public WarehouseIndividual(WarehouseIndividual original) {
+    public WarehouseIndividual(WarehouseProblemForGA problem, WarehouseIndividual original) {
         super(original);
+        this.problem = problem;
     }
 
     @Override
     public double computeFitness() {
         fitness = 0;
-
-        // TODO trocar a forma de obter os valores dos pares para ser executado aqui (ver se o par está na lista, se não estiver calcular)
 
         Cell agent = WarehouseProblemForGA.getCellAgent();
         Cell exit = WarehouseProblemForGA.getExit();
@@ -42,11 +41,11 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
         for (Request request: WarehouseProblemForGA.getRequests()) {
             for(int produto : request.getRequest()) {
                 Cell shelf = WarehouseProblemForGA.getShelfCell(getShelfPos(genome, produto));
-                int value = WarehouseProblemForGA.getValuePairs(agent, shelf);
+                int value = problem.getValuePairs(agent, shelf);
                 fitness += value;
                 agent = shelf;
             }
-            fitness += WarehouseProblemForGA.getValuePairs(agent, exit);
+            fitness += problem.getValuePairs(agent, exit);
             agent = exit;
         }
         return fitness;
@@ -103,7 +102,7 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
 
     @Override
     public WarehouseIndividual clone() {
-        return new WarehouseIndividual(this);
+        return new WarehouseIndividual(problem,this);
 
     }
 

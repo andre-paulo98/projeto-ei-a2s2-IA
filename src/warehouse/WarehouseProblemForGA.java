@@ -1,5 +1,6 @@
 package warehouse;
 
+import agentSearch.Solution;
 import ga.Problem;
 
 import java.text.DateFormat;
@@ -18,6 +19,7 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
     private static int numProducts;
     private static LinkedList<Pair> pairs;
     private static HashMap<String, Integer> pairsHash = new HashMap<>();
+    private WarehouseAgentSearch agentSearch;
 
     private static long startTime;
 
@@ -27,11 +29,30 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         exit = WarehouseAgentSearch.getExit();
         requests = WarehouseAgentSearch.getRequests();
         numProducts = WarehouseAgentSearch.getNumProducts();
+        this.agentSearch = agentSearch;
+
         pairs = agentSearch.getPairs();
 
         for (Pair p: pairs) {
             pairsHash.put(p.getHash(), p.getValue());
         }
+
+    }
+
+    // construtor para quando se clica diretamente no GA sem ter feito o Search1
+    public WarehouseProblemForGA(WarehouseAgentSearch agentSearch, String ignored) {
+        shelves = WarehouseAgentSearch.getShelves();
+        cellAgent = WarehouseAgentSearch.getCellAgent();
+        exit = WarehouseAgentSearch.getExit();
+        requests = WarehouseAgentSearch.getRequests();
+        numProducts = WarehouseAgentSearch.getNumProducts();
+        pairs = agentSearch.getPairs();
+        this.agentSearch = agentSearch;
+
+
+        /*for (Pair p: pairs) {
+            pairsHash.put(p.getHash(), p.getValue());
+        }*/
 
     }
 
@@ -65,16 +86,28 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         return numProducts;
     }
 
-    public static int getValuePairs(Cell cell1, Cell cell2) {
-        Pair pair = new Pair(cell1, cell2);
-        if(pairsHash.containsKey(pair.getHash())) {
-            return pairsHash.get(pair.getHash());
+    public int getValuePairs(Cell cell1, Cell cell2) {
+        Pair pair1 = new Pair(cell1, cell2);
+        if(pairsHash.containsKey(pair1.getHash())) {
+            return pairsHash.get(pair1.getHash());
         }
-        pair = new Pair(cell2, cell1);
-        if(pairsHash.containsKey(pair.getHash())) {
-            return pairsHash.get(pair.getHash());
+        Pair pair2 = new Pair(cell2, cell1);
+        if(pairsHash.containsKey(pair2.getHash())) {
+            return pairsHash.get(pair2.getHash());
         }
-        return 0;
+
+        // ainda não existe na lista têm de ser calculado
+        // código modificado do método `jButtonRunSearch1_actionPerformed(ActionEvent e)`
+        WarehouseState state = ((WarehouseState) agentSearch.getEnvironment()).clone();
+        if (state.getLineAgent()!=cell1.getLine() || state.getColumnAgent()!=cell1.getColumn() )
+            state.setCellAgent(cell1.getLine(), cell1.getColumn()+1);
+        else
+            state.setCellAgent(cell1.getLine(), cell1.getColumn());
+        WarehouseProblemForSearch problem = new WarehouseProblemForSearch(state, cell2);
+        Solution s = agentSearch.solveProblem(problem);
+        int cost = (int)s.getCost();
+        pairsHash.put(pair1.getHash(), cost);
+        return cost;
     }
 
     public static Cell getShelfCell(int pos) {
