@@ -199,6 +199,7 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
                 buttonRunGA.setEnabled(true);
                 buttonExperiments.setEnabled(false);
                 bestInRun = null;
+                problemGA = null;
 
                 simulationPanel.setJButtonSimulateEnabled(false);
                 buttonRunSearch.setEnabled(true);
