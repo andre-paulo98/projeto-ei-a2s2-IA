@@ -497,7 +497,6 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
     @Override
     public void individualRunFinished() {
         textFieldExperimentsStatus.setText("Running ("+ ++totalRunsFinished + "/" + totalRuns + ")");
-        System.out.println("Running ("+ totalRunsFinished + "/" + totalRuns + ")");
     }
 
     public void manageButtons(
