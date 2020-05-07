@@ -1,5 +1,6 @@
 package ga;
 
+import experiments.ExperimentIndividualRunListener;
 import ga.geneticOperators.Mutation;
 import ga.geneticOperators.Recombination;
 import ga.selectionMethods.SelectionMethod;
@@ -21,6 +22,7 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
     private boolean stopped;
     private I bestInRun;
     private double startTime;
+    private static ExperimentIndividualRunListener experimentIndividualRunListener;
 
     public GeneticAlgorithm(
             int populationSize,
@@ -137,5 +139,13 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
         for (GAListener listener : listeners) {
             listener.runEnded(e);
         }
+    }
+
+    public static ExperimentIndividualRunListener getExperimentIndividualRunListener() {
+        return experimentIndividualRunListener;
+    }
+
+    public static void setExperimentIndividualRunListener(ExperimentIndividualRunListener listener) {
+        experimentIndividualRunListener = listener;
     }
 }

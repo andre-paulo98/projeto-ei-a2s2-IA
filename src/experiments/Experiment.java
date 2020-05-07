@@ -36,6 +36,8 @@ public class Experiment <E extends ExperimentsFactory, P extends Problem>{
         for (int run = 0; run < numRuns; run++) {
             ga = factory.generateGAInstance(run + 1);
             ga.run(problem);
+            fireRunExperimentEnded();
+
         }
         fireExperimentEnded();
     }
@@ -65,6 +67,10 @@ public class Experiment <E extends ExperimentsFactory, P extends Problem>{
         for (ExperimentListener listener : listeners) {
             listener.experimentEnded(new ExperimentEvent(this));
         }
+    }
+
+    public void fireRunExperimentEnded() {
+        GeneticAlgorithm.getExperimentIndividualRunListener().individualRunFinished();
     }
     
     @Override

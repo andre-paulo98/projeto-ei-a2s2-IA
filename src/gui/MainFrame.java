@@ -1,6 +1,7 @@
 package gui;
 
 import agentSearch.Solution;
+import experiments.ExperimentIndividualRunListener;
 import warehouse.*;
 import experiments.Experiment;
 import experiments.ExperimentEvent;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
 
-public class MainFrame extends JFrame implements GAListener {
+public class MainFrame extends JFrame implements GAListener, ExperimentIndividualRunListener {
 
     private static final long serialVersionUID = 1L;
     private WarehouseProblemForGA problemGA;
@@ -46,12 +47,15 @@ public class MainFrame extends JFrame implements GAListener {
     private JButton buttonExperiments = new JButton("Experiments");
     private JButton buttonRunExperiments = new JButton("Run experiments");
     private PanelParameters panelParameters = new PanelParameters(this);
-    private JTextField textFieldExperimentsStatus = new JTextField("", 10);
+    private JTextField textFieldExperimentsStatus = new JTextField("", 20);
     private XYSeries seriesBestIndividual;
     private XYSeries seriesAverage;
     private SwingWorker<Void, Void> worker;
 
     private PanelSimulation simulationPanel;
+
+    private int totalRuns = 0;
+    private int totalRunsFinished = 0;
 
     public MainFrame() {
         try {
@@ -411,6 +415,9 @@ public class MainFrame extends JFrame implements GAListener {
         try {
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 experimentsFactory = new WarehouseExperimentsFactory(fc.getSelectedFile());
+                totalRuns = experimentsFactory.getTotalRuns();
+
+                GeneticAlgorithm.setExperimentIndividualRunListener(this);
 
                 manageButtons(true, problemGA != null, false,false, false, true, true, false);
 
@@ -484,6 +491,12 @@ public class MainFrame extends JFrame implements GAListener {
 
     @Override
     public void experimentEnded(ExperimentEvent e) {
+    }
+
+    @Override
+    public void individualRunFinished() {
+        textFieldExperimentsStatus.setText("Running ("+ ++totalRunsFinished + "/" + totalRuns + ")");
+        System.out.println("Running ("+ totalRunsFinished + "/" + totalRuns + ")");
     }
 
     public void manageButtons(

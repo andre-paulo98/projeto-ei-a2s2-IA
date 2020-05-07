@@ -27,6 +27,21 @@ public abstract class ExperimentsFactory {
         readStatisticsFile(configFile);
     }
 
+    public int getTotalRuns() {
+        int total = Integer.parseInt(getParameterValue("Runs"));
+        int qtPopulation = orderedParametersVector[1].values.length;
+        int qtMaxGen = orderedParametersVector[2].values.length;
+        int qtTournaments = orderedParametersVector[4].values.length;
+        int qtRecombinations = orderedParametersVector[5].values.length;
+        int qtProbRecombination = orderedParametersVector[6].values.length;
+        int qtMutations = orderedParametersVector[7].values.length;
+        int qtProbMutation = orderedParametersVector[8].values.length;
+
+        total = total * qtPopulation * qtMaxGen * qtTournaments * qtRecombinations * qtProbRecombination * qtMutations * qtProbMutation;
+
+        return total;
+    }
+
     protected abstract Experiment buildExperiment(WarehouseAgentSearch agentSearch) throws IOException;
 
     public abstract GeneticAlgorithm generateGAInstance(int seed);
