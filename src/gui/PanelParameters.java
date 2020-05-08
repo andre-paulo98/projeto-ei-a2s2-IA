@@ -21,10 +21,12 @@ public class PanelParameters extends PanelAtributesValue {
     public static final String TOURNAMENT_SIZE = "4";
     public static final String PROB_RECOMBINATION = "0.7";
     public static final String PROB_MUTATION = "0.2";
+    public static final String AGENTS = "1";
     private MainFrame mainFrame;
     JTextField textFieldSeed = new JTextField(SEED, TEXT_FIELD_LENGHT);
     JTextField textFieldN = new JTextField(POPULATION_SIZE, TEXT_FIELD_LENGHT);
     JTextField textFieldGenerations = new JTextField(GENERATIONS, TEXT_FIELD_LENGHT);
+    JTextField textFieldAgents = new JTextField(AGENTS, TEXT_FIELD_LENGHT);
     String[] selectionMethods = {"Tournament"};
     JComboBox comboBoxSelectionMethods = new JComboBox(selectionMethods);
     JTextField textFieldTournamentSize = new JTextField(TOURNAMENT_SIZE, TEXT_FIELD_LENGHT);
@@ -50,6 +52,10 @@ public class PanelParameters extends PanelAtributesValue {
         labels.add(new JLabel("Seed: "));
         valueComponents.add(textFieldSeed);
         textFieldSeed.addKeyListener(new IntegerTextField_KeyAdapter(null));
+
+        labels.add(new JLabel("# of agents: "));
+        valueComponents.add(textFieldAgents);
+        textFieldAgents.addKeyListener(new IntegerTextField_KeyAdapter(null));
 
         labels.add(new JLabel("Population size: "));
         valueComponents.add(textFieldN);

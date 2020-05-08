@@ -12,6 +12,7 @@ import java.util.Random;
 public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
 
     public static Random random;
+    private final int agentNum;
     private final int populationSize;
     private final int maxGenerations;
     private Population<I, P> population;
@@ -25,6 +26,7 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
     private static ExperimentIndividualRunListener experimentIndividualRunListener;
 
     public GeneticAlgorithm(
+            int agentNum,
             int populationSize,
             int maxGenerations,
             SelectionMethod<I, P> selection,
@@ -33,6 +35,7 @@ public class GeneticAlgorithm<I extends Individual, P extends Problem<I>> {
             Random rand) {
 
         random = rand;
+        this.agentNum = agentNum;
         this.populationSize = populationSize;
         this.maxGenerations = maxGenerations;
         this.selection = selection;

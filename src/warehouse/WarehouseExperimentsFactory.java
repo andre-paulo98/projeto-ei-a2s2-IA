@@ -18,6 +18,7 @@ import java.util.Random;
 
 public class WarehouseExperimentsFactory extends ExperimentsFactory {
 
+    private int numAgent;
     private int populationSize;
     private int maxGenerations;
     private SelectionMethod<WarehouseIndividual, WarehouseProblemForGA> selection;
@@ -36,6 +37,7 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
     @Override
     public Experiment buildExperiment(WarehouseAgentSearch agentSearch) throws IOException {
         numRuns = Integer.parseInt(getParameterValue("Runs"));
+        //numAgent = Integer.parseInt(getParameterValue("agen")); //TODO
         populationSize = Integer.parseInt(getParameterValue("Population size"));
         maxGenerations = Integer.parseInt(getParameterValue("Max generations"));
         //SELECTION 
@@ -108,6 +110,7 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
     public GeneticAlgorithm generateGAInstance(int seed) {
         GeneticAlgorithm<WarehouseIndividual, WarehouseProblemForGA> ga =
                 new GeneticAlgorithm<>(
+                        numAgent,
                         populationSize,
                         maxGenerations,
                         selection,
@@ -136,6 +139,7 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
 
     private String buildExperimentTextualRepresentation() {
         StringBuilder sb = new StringBuilder();
+        sb.append("Number of agents:" + numAgent + "\r\n");
         sb.append("Population size:" + populationSize + "\r\n");
         sb.append("Max generations:" + maxGenerations + "\r\n");
         sb.append("Selection:" + selection + "\r\n");
@@ -148,6 +152,7 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
 
     private String buildExperimentHeader() {
         StringBuilder sb = new StringBuilder();
+        sb.append("Number of agents:" + "\t");
         sb.append("Population size:" + "\t");
         sb.append("Max generations:" + "\t");
         sb.append("Selection:" + "\t");
@@ -160,6 +165,7 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
 
     private String buildExperimentValues() {
         StringBuilder sb = new StringBuilder();
+        sb.append(numAgent + "\t");
         sb.append(populationSize + "\t");
         sb.append(maxGenerations + "\t");
         sb.append(selection + "\t");

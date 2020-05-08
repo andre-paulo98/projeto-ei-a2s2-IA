@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
 
     private static LinkedList<Cell> shelves;
-    private static Cell cellAgent;
+    private static Cell[] cellAgent;
     private static Cell exit;
     private static ArrayList<Request> requests;
     private static int numProducts;
@@ -48,12 +48,6 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         numProducts = WarehouseAgentSearch.getNumProducts();
         pairs = agentSearch.getPairs();
         this.agentSearch = agentSearch;
-
-
-        /*for (Pair p: pairs) {
-            pairsHash.put(p.getHash(), p.getValue());
-        }*/
-
     }
 
     @Override

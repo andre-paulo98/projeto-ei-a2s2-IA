@@ -11,19 +11,23 @@ public class WarehouseState extends State implements Cloneable {
 
     // ver a classe EightPuzzleState do projeto Search
     private int[][] matrix;
-    private int lineAgent, columnAgent;
+    //private int lineAgent, columnAgent;
+    private Cell[] agents;
     private int lineExit;
     private int columnExit;
     private int steps;
 
-    public WarehouseState(int[][] matrix) {
+    public WarehouseState(int[][] matrix, int numAgent) {
+        this.agents = new Cell[numAgent];
         this.matrix = new int[matrix.length][matrix.length];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 this.matrix[i][j] = matrix[i][j];
                 if (this.matrix[i][j] == Properties.AGENT) {
-                    lineAgent = i;
-                    columnAgent = j;
+                    for (int k = 0; k < agents.length; k++) {
+                        agents[k] = new Cell(i,j);
+                    }
+
 
                     lineExit = i;
                     columnExit = j;
@@ -32,7 +36,8 @@ public class WarehouseState extends State implements Cloneable {
         }
     }
 
-    public WarehouseState(int[][] matrix, int lineExit, int columnExit) {
+    public WarehouseState(int[][] matrix, int lineExit, int columnExit, int numAgent) {
+        this.agents = new Cell[numAgent];
         this.matrix = new int[matrix.length][matrix.length];
         this.lineExit = lineExit;
         this.columnExit = columnExit;
@@ -41,8 +46,9 @@ public class WarehouseState extends State implements Cloneable {
             for (int j = 0; j < matrix.length; j++) {
                 this.matrix[i][j] = matrix[i][j];
                 if (this.matrix[i][j] == Properties.AGENT) {
-                    lineAgent = i;
-                    columnAgent = j;
+                    for (int k = 0; k < agents.length; k++) {
+                        agents[k] = new Cell(i,j);
+                    }
                 }
             }
         }
@@ -58,60 +64,68 @@ public class WarehouseState extends State implements Cloneable {
         fireUpdatedEnvironment();
     }
 
-
-    public boolean canMoveUp() {
-        return lineAgent - 1 >= 0 && matrix[lineAgent - 1][columnAgent] != Properties.SHELF;
+    public boolean canMoveUp(int n) {
+        //return lineAgent - 1 >= 0 && matrix[lineAgent - 1][columnAgent] != Properties.SHELF;
+        return agents[n].getLine() - 1 >= 0 && matrix[agents[n].getLine() - 1][agents[n].getColumn()] != Properties.SHELF;
     }
 
-    public boolean canMoveRight() {
-        return columnAgent + 1 < getSize() && matrix[lineAgent][columnAgent + 1] != Properties.SHELF;
+    public boolean canMoveRight(int n) {
         /*if (columnAgent + 1 < getSize() && matrix[lineAgent][columnAgent + 1] != Properties.SHELF) {
             return true;
         }
         return false;*/
+        //return columnAgent + 1 < getSize() && matrix[lineAgent][columnAgent + 1] != Properties.SHELF;
+        return agents[n].getColumn() + 1 < getSize() && matrix[agents[n].getLine()][agents[n].getColumn() + 1] != Properties.SHELF;
+
     }
 
-    public boolean canMoveDown() {
+    public boolean canMoveDown(int n) {
         /*if (lineAgent + 1 < getSize() && matrix[lineAgent + 1][columnAgent] != Properties.SHELF) {
             return true;
         }
         return false;*/
-        return lineAgent + 1 < getSize() && matrix[lineAgent + 1][columnAgent] != Properties.SHELF;
+        //return lineAgent + 1 < getSize() && matrix[lineAgent + 1][columnAgent] != Properties.SHELF;
+        return agents[n].getLine() + 1 < getSize() && matrix[agents[n].getLine() + 1][agents[n].getColumn()] != Properties.SHELF;
     }
 
-    public boolean canMoveLeft() {
+    public boolean canMoveLeft(int n) {
         /*if (columnAgent - 1 >= 0 && matrix[lineAgent][columnAgent - 1] != Properties.SHELF) {
             return true;
         }
         return false;*/
-        return columnAgent - 1 >= 0 && matrix[lineAgent][columnAgent - 1] != Properties.SHELF;
+        //return columnAgent - 1 >= 0 && matrix[lineAgent][columnAgent - 1] != Properties.SHELF;
+        return agents[n].getColumn() - 1 >= 0 && matrix[agents[n].getLine()][agents[n].getColumn() - 1] != Properties.SHELF;
     }
 
-    public void moveUp() {
-        matrix[lineAgent][columnAgent] = Properties.EMPTY;
-        matrix[--lineAgent][columnAgent] = Properties.AGENT;
+    public void moveUp(int n) {
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.EMPTY;
+        agents[n] = agents[n].getCloneIncrement(-1,0);
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.AGENT;
     }
 
-    public void moveRight() {
-        matrix[lineAgent][columnAgent] = Properties.EMPTY;
-        matrix[lineAgent][++columnAgent] = Properties.AGENT;
+    public void moveRight(int n) {
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.EMPTY;
+        agents[n] = agents[n].getCloneIncrement(0,1);
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.AGENT;
     }
 
-    public void moveDown() {
-        matrix[lineAgent][columnAgent] = Properties.EMPTY;
-        matrix[++lineAgent][columnAgent] = Properties.AGENT;
+    public void moveDown(int n) {
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.EMPTY;
+        agents[n] = agents[n].getCloneIncrement(1,0);
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.AGENT;
     }
 
-    public void moveLeft() {
-        matrix[lineAgent][columnAgent] = Properties.EMPTY;
-        matrix[lineAgent][--columnAgent] = Properties.AGENT;
+    public void moveLeft(int n) {
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.EMPTY;
+        agents[n] = agents[n].getCloneIncrement(0,-1);
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.AGENT;
     }
 
-    public void setCellAgent(int line, int column) {
-        matrix[lineAgent][columnAgent] = Properties.EMPTY;
-        columnAgent = column;
-        lineAgent = line;
-        matrix[lineAgent][columnAgent] = Properties.AGENT;
+    public void setCellAgent(int line, int column, int n) {
+
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.EMPTY;
+        agents[n] = new Cell(line, column);
+        matrix[agents[n].getLine()][agents[n].getColumn()] = Properties.AGENT;
     }
 
     public int getSteps() {
@@ -131,7 +145,7 @@ public class WarehouseState extends State implements Cloneable {
     }
 
     public Color getCellColor(int line, int column) {
-        if (line == lineExit && column == columnExit && (line != lineAgent || column != columnAgent))
+        if (line == lineExit && column == columnExit && !isAgent(line,column))
             return Properties.COLOREXIT;
 
         switch (matrix[line][column]) {
@@ -144,6 +158,27 @@ public class WarehouseState extends State implements Cloneable {
         }
     }
 
+    public boolean isAgent(int line, int column){
+        for (Cell agent : agents) {
+            if (line == agent.getLine() && column == agent.getColumn()){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Cell[] getAgents(){
+        return agents;
+    }
+
+    public Cell getAgent(int n){
+         return agents[n];
+    }
+
+    public void setAgent(int n, int line, int column){
+        agents[n] = new Cell(line,column);
+    }
+    /*
     public int getLineAgent() {
         return lineAgent;
     }
@@ -151,7 +186,7 @@ public class WarehouseState extends State implements Cloneable {
     public int getColumnAgent() {
         return columnAgent;
     }
-
+    */
     @Override
     public boolean equals(Object other) {
         if (!(other instanceof WarehouseState)) {
@@ -187,7 +222,7 @@ public class WarehouseState extends State implements Cloneable {
 
     @Override
     public WarehouseState clone() {
-        return new WarehouseState(matrix, lineExit, columnExit);
+        return new WarehouseState(matrix, lineExit, columnExit, agents.length);
     }
 
     private final ArrayList<EnvironmentListener> listeners = new ArrayList<>();

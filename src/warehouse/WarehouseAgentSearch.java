@@ -11,8 +11,9 @@ import java.util.LinkedList;
 public class WarehouseAgentSearch<S extends State> extends Agent<S> {
 
     protected S initialEnvironment;
+    private static int numAgent;
     private static LinkedList<Cell> shelves;
-    private static Cell cellAgent;
+    private static Cell[] cellAgent;
     private static Cell exit;
     private static ArrayList<Request> requests;
     private static int numProducts;
@@ -23,6 +24,7 @@ public class WarehouseAgentSearch<S extends State> extends Agent<S> {
         initialEnvironment = environment;
         heuristics.add(new HeuristicWarehouse());
         heuristic = heuristics.get(0);
+        numAgent = 1;
     }
 
     @Override
@@ -57,7 +59,9 @@ public class WarehouseAgentSearch<S extends State> extends Agent<S> {
             for (int j = 0; j < dim; j++) {
                 matrix[i][j] = scanner.nextInt();
                 if (matrix[i][j] == Properties.AGENT) {
-                    cellAgent = new Cell(i, j);
+                    for (int k = 0; k < numAgent; k++) {
+                        cellAgent[k] = new Cell(i, j);
+                    }
                     exit = new Cell(i, j);
                 } else if (matrix[i][j] == Properties.SHELF)
                     shelves.add(new Cell(i, j));
@@ -66,7 +70,7 @@ public class WarehouseAgentSearch<S extends State> extends Agent<S> {
         }
         pairs = new LinkedList<>();
         for (Cell b : shelves) {
-            pairs.add(new Pair(cellAgent, b));
+            pairs.add(new Pair(cellAgent[0], b));
         }
 
         for (int i = 0; i < shelves.size() - 1; i++) {
@@ -100,7 +104,7 @@ public class WarehouseAgentSearch<S extends State> extends Agent<S> {
         return pairs;
     }
 
-    public static Cell getCellAgent() {
+    public static Cell[] getCellAgent() {
         return cellAgent;
     }
 

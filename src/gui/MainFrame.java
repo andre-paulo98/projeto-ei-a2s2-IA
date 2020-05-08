@@ -191,8 +191,9 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 File dataSet = fc.getSelectedFile();
                 int[][] matrix = WarehouseAgentSearch.readInitialStateFromFile(dataSet);
-                state = new WarehouseState(matrix);
-                agentSearch = new WarehouseAgentSearch(new WarehouseState(matrix));
+                int numAgent = Integer.parseInt(getPanelParameters().textFieldAgents.getText());
+                state = new WarehouseState(matrix, numAgent);
+                agentSearch = new WarehouseAgentSearch(new WarehouseState(matrix, numAgent));
                 problemPanel.textArea.setText(agentSearch.getEnvironment().toString());
                 problemPanel.textArea.append(agentSearch.showRequests());
                 bestIndividualPanel.textArea.setText("");
@@ -234,10 +235,13 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
                         LinkedList<Pair> pairs = agentSearch.getPairs();
                         for (Pair p : pairs) {
                             WarehouseState state = ((WarehouseState) agentSearch.getEnvironment()).clone();
-                            if (state.getLineAgent()!=p.getCell1().getLine() || state.getColumnAgent()!=p.getCell1().getColumn() )
-                                state.setCellAgent(p.getCell1().getLine(), p.getCell1().getColumn()+1);
-                            else
-                                state.setCellAgent(p.getCell1().getLine(), p.getCell1().getColumn());
+                            Cell[] agents = state.getAgents();
+                            for (int i = 0; i < agents.length; i++) {
+                                if (agents[i].getLine() != p.getCell1().getLine() || agents[i].getColumn()!=p.getCell1().getColumn())
+                                   state.setAgent(i, p.getCell1().getLine(), p.getCell1().getColumn()+1);
+                                else
+                                    state.setAgent(i, p.getCell1().getLine(), p.getCell1().getColumn());
+                            }
                             WarehouseProblemForSearch problem = new WarehouseProblemForSearch(state, p.getCell2());
                             Solution s = agentSearch.solveProblem(problem);
                             p.setValue((int) s.getCost());
@@ -283,6 +287,7 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
             manageButtons(false, false, false, true, true, true, false, false);
             Random random = new Random(Integer.parseInt(getPanelParameters().textFieldSeed.getText()));
             ga = new GeneticAlgorithm<>(
+                    Integer.parseInt(getPanelParameters().textFieldAgents.getText()),
                     Integer.parseInt(getPanelParameters().textFieldN.getText()),
                     Integer.parseInt(getPanelParameters().textFieldGenerations.getText()),
                     getPanelParameters().getSelectionMethod(),
@@ -447,15 +452,18 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
             public Void doInBackground() {
                 try {
                     int[][] matrix = WarehouseAgentSearch.readInitialStateFromFile(new File(experimentsFactory.getFile()));
-                    WarehouseAgentSearch agentSearch = new WarehouseAgentSearch(new WarehouseState(matrix));
+                    WarehouseAgentSearch agentSearch = new WarehouseAgentSearch(new WarehouseState(matrix,1));//todo
 
                     LinkedList<Pair> pairs = agentSearch.getPairs();
                     for (Pair p : pairs) {
                         WarehouseState state = ((WarehouseState) agentSearch.getEnvironment()).clone();
-                        if (state.getLineAgent()!=p.getCell1().getLine() || state.getColumnAgent()!=p.getCell1().getColumn() )
-                            state.setCellAgent(p.getCell1().getLine(), p.getCell1().getColumn()+1);
-                        else
-                            state.setCellAgent(p.getCell1().getLine(), p.getCell1().getColumn());
+                        Cell[] agents = state.getAgents();
+                        for (int i = 0; i < agents.length; i++) {
+                            if (agents[i].getLine() != p.getCell1().getLine() || agents[i].getColumn()!=p.getCell1().getColumn())
+                                state.setAgent(i, p.getCell1().getLine(), p.getCell1().getColumn()+1);
+                            else
+                                state.setAgent(i, p.getCell1().getLine(), p.getCell1().getColumn());
+                        }
                         WarehouseProblemForSearch problem = new WarehouseProblemForSearch(state, p.getCell2());
                         Solution s = agentSearch.solveProblem(problem);
                         p.setValue((int) s.getCost());
@@ -524,7 +532,6 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
     public PanelParameters getPanelParameters() {
         return panelParameters;
     }
-
 
     public WarehouseAgentSearch getAgentSearch() {
         return agentSearch;

@@ -30,4 +30,8 @@ public class Cell {
     public int getColumn() {
         return column;
     }
+
+    public Cell getCloneIncrement(int lineIncrement, int columnIncrement){
+        return new Cell(line+lineIncrement,column+columnIncrement);
+    }
 }
