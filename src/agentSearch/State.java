@@ -9,9 +9,9 @@ public abstract class State{
 
     public State(){}
 
-    public abstract void executeAction(Action action);
+    public abstract void executeAction(Action action, int n);
 
-    public abstract void executeActionSimulation(Action action);
+    public abstract void executeActionSimulation(Action action, int n);
 
     public Action getAction(){
         return action;

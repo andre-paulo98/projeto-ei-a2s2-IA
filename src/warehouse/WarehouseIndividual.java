@@ -35,18 +35,30 @@ public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemFor
     public double computeFitness() {
         fitness = 0;
 
-        Cell agent = WarehouseProblemForGA.getCellAgent();
+        Cell[] agents = WarehouseProblemForGA.getCellAgents();
         Cell exit = WarehouseProblemForGA.getExit();
+        int agentNum = 0;
+        int numAgents = agents.length;
 
         for (Request request: WarehouseProblemForGA.getRequests()) {
             for(int produto : request.getRequest()) {
+
                 Cell shelf = WarehouseProblemForGA.getShelfCell(getShelfPos(genome, produto));
-                int value = problem.getValuePairs(agent, shelf);
+                int value = problem.getValuePairs(agents[agentNum], shelf);
                 fitness += value;
-                agent = shelf;
+                agents[agentNum] = shelf;
+                if (agentNum < numAgents){
+                    agentNum++;
+                }else{
+                    agentNum = 0;
+                }
+
             }
-            fitness += problem.getValuePairs(agent, exit);
-            agent = exit;
+            for (int i = 0; i < numAgents; i++) {
+                fitness += problem.getValuePairs(agents[i], exit);
+                agents[i] = exit;
+            }
+
         }
         return fitness;
     }

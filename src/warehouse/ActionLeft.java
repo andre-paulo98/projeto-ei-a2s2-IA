@@ -9,13 +9,13 @@ public class ActionLeft extends Action<WarehouseState>{
     }
 
     @Override
-    public void execute(WarehouseState state){
-        state.moveLeft();
+    public void execute(WarehouseState state, int n){
+        state.moveLeft(n);
         state.setAction(this);
     }
 
     @Override
-    public boolean isValid(WarehouseState state){
-        return state.canMoveLeft();
+    public boolean isValid(WarehouseState state, int n){
+        return state.canMoveLeft(n);
     }
 }

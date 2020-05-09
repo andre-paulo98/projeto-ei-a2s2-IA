@@ -191,7 +191,7 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 File dataSet = fc.getSelectedFile();
                 int[][] matrix = WarehouseAgentSearch.readInitialStateFromFile(dataSet);
-                int numAgent = Integer.parseInt(getPanelParameters().textFieldAgents.getText());
+                int numAgent = getAgentsNum();
                 state = new WarehouseState(matrix, numAgent);
                 agentSearch = new WarehouseAgentSearch(new WarehouseState(matrix, numAgent));
                 problemPanel.textArea.setText(agentSearch.getEnvironment().toString());
@@ -287,7 +287,7 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
             manageButtons(false, false, false, true, true, true, false, false);
             Random random = new Random(Integer.parseInt(getPanelParameters().textFieldSeed.getText()));
             ga = new GeneticAlgorithm<>(
-                    Integer.parseInt(getPanelParameters().textFieldAgents.getText()),
+                    getAgentsNum(),
                     Integer.parseInt(getPanelParameters().textFieldN.getText()),
                     Integer.parseInt(getPanelParameters().textFieldGenerations.getText()),
                     getPanelParameters().getSelectionMethod(),
@@ -323,6 +323,11 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
         } catch (NumberFormatException e1) {
             JOptionPane.showMessageDialog(this, "Wrong parameters!", "Error!", JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+    //TODO
+    public int getAgentsNum(){
+        return Integer.parseInt(getPanelParameters().textFieldAgents.getText());
     }
 
 

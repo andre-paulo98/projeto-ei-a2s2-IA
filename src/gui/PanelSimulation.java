@@ -97,7 +97,7 @@ public class PanelSimulation extends JPanel implements EnvironmentListener {
     }
 
     public void createEnvironment() {
-        environment = new WarehouseState(mainFrame.getWarehouseState().getMatrix());
+        environment = new WarehouseState(mainFrame.getWarehouseState().getMatrix(), mainFrame.getAgentsNum());
 
         environment.addEnvironmentListener(this);
 

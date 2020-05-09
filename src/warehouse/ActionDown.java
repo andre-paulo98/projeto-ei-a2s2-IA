@@ -9,13 +9,13 @@ public class ActionDown extends Action<WarehouseState>{
     }
 
     @Override
-    public void execute(WarehouseState state){
-        state.moveDown();
+    public void execute(WarehouseState state, int n){
+        state.moveDown(n);
         state.setAction(this);
     }
 
     @Override
-    public boolean isValid(WarehouseState state){
-        return state.canMoveDown();
+    public boolean isValid(WarehouseState state, int n){
+        return state.canMoveDown(n);
     }
 }

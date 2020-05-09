@@ -8,9 +8,9 @@ public abstract class Action <S extends State>{
         this.cost = cost;
     }
 
-    public abstract void execute(S State);
+    public abstract void execute(S State, int n);
 
-    public abstract boolean isValid(S State);
+    public abstract boolean isValid(S State, int n);
 
     public double getCost(){
         return cost;

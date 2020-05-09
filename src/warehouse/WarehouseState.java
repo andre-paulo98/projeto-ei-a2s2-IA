@@ -54,12 +54,12 @@ public class WarehouseState extends State implements Cloneable {
         }
     }
 
-    public void executeAction(Action action) {
-        action.execute(this);
+    public void executeAction(Action action, int n) {
+        action.execute(this, n);
     }
 
-    public void executeActionSimulation(Action action) {
-        action.execute(this);
+    public void executeActionSimulation(Action action, int n) {
+        action.execute(this, n);
         steps++;
         fireUpdatedEnvironment();
     }

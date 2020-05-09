@@ -56,6 +56,9 @@ public class Agent<E extends State> {
 
     public E executeSolution(Solution s) {
         for (Action action : s.getActions())
+            for (int i = 0; i < e; i++) {
+
+            }
             environment.executeAction(action);
         return environment;
     }

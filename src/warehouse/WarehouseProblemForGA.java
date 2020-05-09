@@ -64,7 +64,8 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         return shelves;
     }
 
-    public static Cell getCellAgent() {
+    public static Cell[] getCellAgents() {
+
         return cellAgent;
     }
 
@@ -93,10 +94,13 @@ public class WarehouseProblemForGA implements Problem<WarehouseIndividual> {
         // ainda não existe na lista têm de ser calculado
         // código modificado do método `jButtonRunSearch1_actionPerformed(ActionEvent e)`
         WarehouseState state = ((WarehouseState) agentSearch.getEnvironment()).clone();
-        if (state.getLineAgent()!=cell1.getLine() || state.getColumnAgent()!=cell1.getColumn() )
-            state.setCellAgent(cell1.getLine(), cell1.getColumn()+1);
-        else
-            state.setCellAgent(cell1.getLine(), cell1.getColumn());
+        Cell[] agents = state.getAgents();
+        for (int i = 0; i < agents.length; i++) {
+            if (agents[i].getLine() != cell1.getLine() || agents[i].getColumn()!=cell1.getColumn())
+                state.setAgent(i, cell1.getLine(), cell1.getColumn()+1);
+            else
+                state.setAgent(i, cell1.getLine(), cell1.getColumn());
+        }
         WarehouseProblemForSearch problem = new WarehouseProblemForSearch(state, cell2);
         Solution s = agentSearch.solveProblem(problem);
         int cost = (int)s.getCost();
