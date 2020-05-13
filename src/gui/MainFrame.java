@@ -27,6 +27,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class MainFrame extends JFrame implements GAListener, ExperimentIndividualRunListener {
 
@@ -496,25 +497,34 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
 				textFieldExperimentsStatus.setText("Finished");
 				String finishedTime = LocalDateTime.now().getHour() + ":" + LocalDateTime.now().getMinute() + ":" + LocalDateTime.now().getSecond();
 				// ALERT DISCORD
-				HttpURLConnection urlConn;
+				HttpURLConnection urlConn = null;
 				URL mUrl = null;
 				try {
-					mUrl = new URL("https://canary.discordapp.com/api/webhooks/709786843205468161/vXzLD-U_0-Poj0ZB8SBm30H_yHRU4rA5MUrQWJTmAtfIIhu1RJkqxoyQPCIZ-YBY0ADL");
+					mUrl = new URL("https://webhook.andrepaulo.me/inteligencia-artificial-progress.php?e="+selectedPuzzle+"&s="+startedHour+"&f="+finishedTime);
 					//mUrl = new URL("https://webhook.site/6420636f-2710-4922-822e-283a8d9ff95d");
 
 					urlConn = (HttpURLConnection) mUrl.openConnection();
-					urlConn.setDoOutput(true);
-					String query = "{\n\t\"embeds\":[{\n\t\t\"description\": \"Experiment: "+selectedPuzzle+"\\nStarted At: "+startedHour+"\\nFinished At: "+finishedTime+"\"\n}]\n}";
-					urlConn.addRequestProperty("Content-Type", "application/json");
-                    urlConn.setRequestProperty("Content-Length", Integer.toString(query.length()));
-                    urlConn.getOutputStream().write(query.getBytes("UTF8"));
-					InputStream in = new BufferedInputStream(urlConn.getInputStream());
+					//urlConn.setDoOutput(true);
+					//String query = "{\"embeds\":[{\"description\": \"Experiment: "+selectedPuzzle+"\\nStarted At: "+startedHour+"\\nFinished At: "+finishedTime+"\"}]}";
+					//urlConn.addRequestProperty("Content-Type", "application/json");
+                    //urlConn.setRequestProperty("Content-Length", Integer.toString(query.length()));
+                    //urlConn.getOutputStream().write(query.getBytes("UTF8"));
+                    InputStream stream = urlConn.getErrorStream();
+                    if(stream == null) {
+	                    stream = urlConn.getInputStream();
+                    }
+					System.out.println(stream);
 
 				} catch (MalformedURLException ex) {
 					ex.printStackTrace();
 				} catch (UnsupportedEncodingException ex) {
                     ex.printStackTrace();
                 } catch (IOException ex) {
+					InputStream error = urlConn.getErrorStream();
+					try (Scanner scanner = new Scanner(error)) {
+						scanner.useDelimiter("\\Z");
+						System.out.println(scanner.next());
+					}
                     ex.printStackTrace();
                 }
             }
