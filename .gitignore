@@ -28,8 +28,8 @@ hs_err_pid*
 
 out/production/ProjWarehouse/META-INF/ProjWarehouse.kotlin_module
 
-statistic_average_fitness.xls
+#statistic_average_fitness.xls
 
-statistic_best_per_experiment.txt
+#statistic_best_per_experiment.txt
 
-statistic_best_per_experiment_fitness.xls
+#statistic_best_per_experiment_fitness.xls
