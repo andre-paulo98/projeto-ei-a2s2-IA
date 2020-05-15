@@ -12,7 +12,7 @@ public class MutationScrumble<I extends IntVectorIndividual, P extends Problem<I
     }
 
     @Override
-    public void mutate(I ind) {
+    public void mutate(I ind) { // TODO fazer código como se tivesse sido nós a fazer
         int l = ind.getNumGenes();
         for(int k = 0; k < 5; k++){//repeat process 5 times
             int r1, r2;
