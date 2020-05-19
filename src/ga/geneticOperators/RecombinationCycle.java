@@ -11,7 +11,7 @@ public class RecombinationCycle<I extends IntVectorIndividual, P extends Problem
         super(probability);
     }
 
-    private int[] child1,child2;
+    private int[] child1,child2; 
 
     private int[] visitedIndices;
     private int visitedIndicesPos;
