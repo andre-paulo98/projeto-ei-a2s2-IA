@@ -14,7 +14,7 @@ public class MutationInversion<I extends IntVectorIndividual, P extends Problem<
     @Override
     public void mutate(I ind) {
         int[] array = ind.getGenome();
-        int l = array.length;
+        int l = array.length; // TODO fazer código como se tivesse sido nós a fazer
         for(int k = 0; k < 5; k++){//repeat process 5 times
             //get 2 random integers between 0 and size of array
             int r1 = GeneticAlgorithm.randomNumber(0,l);

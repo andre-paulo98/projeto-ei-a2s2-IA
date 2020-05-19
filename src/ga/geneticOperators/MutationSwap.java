@@ -11,7 +11,7 @@ public class MutationSwap<I extends IntVectorIndividual, P extends Problem<I>> e
     }
 
     @Override
-    public void mutate(I ind) {
+    public void mutate(I ind) { // TODO fazer código como se tivesse sido nós a fazer
         int[] array = ind.getGenome();
         int l = array.length;
         //get 2 random integers between 0 and size of array
