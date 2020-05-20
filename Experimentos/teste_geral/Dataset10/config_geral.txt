@@ -1,26 +1,26 @@
-Runs: 50
+Runs: 30
 
 Population size: 100, 200
 
-Max generations: 3000
+Max generations: 1500
 
 //--------------------------------
 
 Selection: tournament
 
-Tournament size: 2, 4, 6
+Tournament size: 2, 4
 
 //--------------------------------
 
-Recombination: pmx, ox1, cx, vr
+Recombination: pmx, ox1, cx
 
-Recombination probability: 0.7, 0.75, 0.8, 0.85
+Recombination probability: 0.7, 0.8
 
 //--------------------------------
 
-Mutation: insert, swap, scrumble, inversion
+Mutation: swap
 
-Mutation probability: 0.1, 0.2, 0.3, 0.4
+Mutation probability: 0.2, 0.4
 
 //--------------------------------
 

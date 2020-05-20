@@ -1,8 +1,8 @@
-Runs: 50
+Runs: 30
 
 Population size: 100, 200
 
-Max generations: 3000
+Max generations: 1500
 
 //--------------------------------
 
@@ -18,7 +18,7 @@ Recombination probability: 0.7, 0.8
 
 //--------------------------------
 
-Mutation: insert, swap, scrumble, inversion
+Mutation: swap
 
 Mutation probability: 0.2, 0.4
 
