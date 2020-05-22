@@ -17,7 +17,7 @@ Recombination probability: 0.7, 0.8
 
 //--------------------------------
 
-Mutation: insert, swap, scrumble, inversion
+Mutation: insert, swap, scramble, inversion
 
 Mutation probability: 0.2, 0.4
 

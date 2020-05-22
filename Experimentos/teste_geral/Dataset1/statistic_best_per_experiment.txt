@@ -49,7 +49,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:PMX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -60,7 +60,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:PMX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -137,7 +137,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:PMX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -148,7 +148,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:PMX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -225,7 +225,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:OX1
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -236,7 +236,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:OX1
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -313,7 +313,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:OX1
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -324,7 +324,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:OX1
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -401,7 +401,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:CX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -412,7 +412,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:CX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -489,7 +489,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:CX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -500,7 +500,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:CX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -577,7 +577,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:VR
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -588,7 +588,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:VR
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -665,7 +665,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:VR
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -676,7 +676,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:VR
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -753,7 +753,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:PMX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -764,7 +764,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:PMX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -841,7 +841,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:PMX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -852,7 +852,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:PMX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -929,7 +929,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:OX1
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -940,7 +940,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:OX1
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1017,7 +1017,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:OX1
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1028,7 +1028,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:OX1
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1105,7 +1105,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:CX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1116,7 +1116,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:CX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1193,7 +1193,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:CX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1204,7 +1204,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:CX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1281,7 +1281,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:VR
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1292,7 +1292,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:VR
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1369,7 +1369,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:VR
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1380,7 +1380,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:VR
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1457,7 +1457,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:PMX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1468,7 +1468,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:PMX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1545,7 +1545,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:PMX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1556,7 +1556,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:PMX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1633,7 +1633,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:OX1
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1644,7 +1644,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:OX1
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1721,7 +1721,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:OX1
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1732,7 +1732,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:OX1
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1809,7 +1809,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:CX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1820,7 +1820,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:CX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1897,7 +1897,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:CX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1908,7 +1908,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:CX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -1985,7 +1985,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:VR
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -1996,7 +1996,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:VR
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2073,7 +2073,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:VR
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -2084,7 +2084,7 @@ Max generations:1000
 Selection:Tournament(2)
 Recombination:VR
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2161,7 +2161,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:PMX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -2172,7 +2172,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:PMX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2249,7 +2249,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:PMX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2260,7 +2260,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:PMX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2337,7 +2337,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:OX1
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2348,7 +2348,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:OX1
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2425,7 +2425,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:OX1
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2436,7 +2436,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:OX1
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2513,7 +2513,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:CX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -2524,7 +2524,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:CX
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -2601,7 +2601,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:CX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -2612,7 +2612,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:CX
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -2689,7 +2689,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:VR
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -2700,7 +2700,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:VR
 Recombination prob.: 0.7
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
@@ -2777,7 +2777,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:VR
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.2
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
@@ -2788,7 +2788,7 @@ Max generations:1000
 Selection:Tournament(4)
 Recombination:VR
 Recombination prob.: 0.8
-Mutation:Scrumble
+Mutation:Scramble
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 

@@ -70,8 +70,8 @@ public class WarehouseExperimentsFactory extends ExperimentsFactory {
             case "swap":
                 mutation = new MutationSwap<>(mutationProbability);
                 break;
-            case "scrumble":
-                mutation = new MutationScrumble<>(mutationProbability);
+            case "scramble":
+                mutation = new MutationScramble<>(mutationProbability);
                 break;
             case "inversion":
                 mutation = new MutationInversion<>(mutationProbability);
