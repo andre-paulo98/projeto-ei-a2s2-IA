@@ -61,6 +61,7 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
 	private int totalRuns = 0;
 	private int totalRunsFinished = 0;
 	private String selectedPuzzle = null;
+	private String selectedConfig = null;
 	private String startedHour = null;
 
 	public MainFrame() {
@@ -422,6 +423,7 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
 		try {
 			if (returnVal == JFileChooser.APPROVE_OPTION) {
 				experimentsFactory = new WarehouseExperimentsFactory(fc.getSelectedFile());
+				selectedConfig = fc.getSelectedFile().getName();
 				selectedPuzzle = experimentsFactory.getFile();
 				totalRuns = experimentsFactory.getTotalRuns();
 				totalRunsFinished = 0;
@@ -500,7 +502,7 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
 				HttpURLConnection urlConn = null;
 				URL mUrl = null;
 				try {
-					mUrl = new URL("https://webhook.andrepaulo.me/inteligencia-artificial-progress.php?e="+selectedPuzzle+"&s="+startedHour+"&f="+finishedTime);
+					mUrl = new URL("https://webhook.andrepaulo.me/inteligencia-artificial-progress-v2.php?e="+selectedPuzzle+"&s="+startedHour+"&f="+finishedTime+"&c="+selectedConfig);
 					//mUrl = new URL("https://webhook.site/6420636f-2710-4922-822e-283a8d9ff95d");
 
 					urlConn = (HttpURLConnection) mUrl.openConnection();
