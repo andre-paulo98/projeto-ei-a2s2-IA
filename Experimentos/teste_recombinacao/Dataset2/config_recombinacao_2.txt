@@ -1,0 +1,32 @@
+Runs: 50
+
+Population size: 200
+
+Max generations: 3000
+
+//--------------------------------
+
+Selection: tournament
+
+Tournament size: 2
+
+//--------------------------------
+
+Recombination: cx, vr
+
+Recombination probability: 0.5, 0.6, 0.7, 0.8, 0.9
+
+//--------------------------------
+
+Mutation: inversion
+
+Mutation probability: 0.4
+
+//--------------------------------
+
+Problem file: ./puzzle_2.txt
+
+//--------------------------------
+
+Statistic: BestIndividual
+Statistic: BestAverage
