@@ -1,0 +1,21 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:	Tempo:
+200	2000	Tournament(2)	CX	0.8	Insert	0.1		374.0	7143.0
+200	2000	Tournament(2)	CX	0.8	Scramble	0.1		344.0	7099.0
+200	2000	Tournament(2)	CX	0.8	Insert	0.2		388.0	6838.0
+200	2000	Tournament(2)	CX	0.8	Scramble	0.2		342.0	7097.0
+200	2000	Tournament(2)	CX	0.8	Insert	0.3		386.0	7430.0
+200	2000	Tournament(2)	CX	0.8	Scramble	0.3		322.0	7280.0
+200	2000	Tournament(2)	CX	0.8	Insert	0.4		358.0	7307.0
+200	2000	Tournament(2)	CX	0.8	Scramble	0.4		318.0	7704.0
+200	2000	Tournament(2)	CX	0.8	Insert	0.5		364.0	7540.0
+200	2000	Tournament(2)	CX	0.8	Scramble	0.5		340.0	7600.0
+200	2000	Tournament(2)	CX	0.8	Swap	0.1		322.0	7325.0
+200	2000	Tournament(2)	CX	0.8	Inversion	0.1		346.0	7128.0
+200	2000	Tournament(2)	CX	0.8	Swap	0.2		318.0	5893.0
+200	2000	Tournament(2)	CX	0.8	Inversion	0.2		340.0	5888.0
+200	2000	Tournament(2)	CX	0.8	Swap	0.3		318.0	5988.0
+200	2000	Tournament(2)	CX	0.8	Inversion	0.3		320.0	5889.0
+200	2000	Tournament(2)	CX	0.8	Swap	0.4		322.0	6324.0
+200	2000	Tournament(2)	CX	0.8	Inversion	0.4		320.0	6590.0
+200	2000	Tournament(2)	CX	0.8	Swap	0.5		324.0	6119.0
+200	2000	Tournament(2)	CX	0.8	Inversion	0.5		358.0	6288.0

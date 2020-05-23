@@ -1,0 +1,221 @@
+
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Insert
+Mutation prob.: 0.1
+fitness: 374.0
+path: 0 25 26 0 0 0 0 19 21 0 0 27 30 22 28 0 23 10 2 16 20 1 29 4 13 5 7 9 15 11 8 17 12 0 24 3 6 14 0 18 
+time: 5.85 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Scramble
+Mutation prob.: 0.1
+fitness: 344.0
+path: 0 0 0 22 0 0 26 3 21 0 0 25 5 23 13 0 30 7 27 11 1 19 16 17 28 6 4 9 20 24 0 2 29 12 0 8 10 15 14 18 
+time: 5.89 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Insert
+Mutation prob.: 0.2
+fitness: 388.0
+path: 0 0 19 26 0 0 0 10 25 0 22 0 2 30 5 21 17 4 23 27 16 29 9 7 3 11 15 14 20 0 28 24 12 8 0 13 18 1 6 0 
+time: 5.84 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Scramble
+Mutation prob.: 0.2
+fitness: 342.0
+path: 0 0 3 0 27 0 0 5 2 25 0 22 7 10 26 28 21 1 19 30 13 16 4 20 0 11 17 15 8 0 24 12 29 6 0 18 14 9 23 0 
+time: 5.92 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Insert
+Mutation prob.: 0.3
+fitness: 386.0
+path: 0 0 11 27 22 0 0 24 23 25 0 1 13 17 21 0 7 2 20 26 5 6 10 4 19 3 28 18 9 30 0 0 12 29 8 0 16 14 15 0 
+time: 6.0 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Scramble
+Mutation prob.: 0.3
+fitness: 322.0
+path: 0 0 0 0 0 0 21 0 22 0 0 25 2 23 0 1 26 4 27 28 7 30 16 17 13 5 10 15 20 11 6 19 29 12 24 3 8 9 14 18 
+time: 6.14 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Insert
+Mutation prob.: 0.4
+fitness: 358.0
+path: 0 25 27 17 0 0 26 22 0 11 0 30 23 0 13 0 21 20 1 0 0 0 6 4 24 7 2 8 15 18 5 19 14 29 28 3 10 12 9 16 
+time: 6.25 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Scramble
+Mutation prob.: 0.4
+fitness: 318.0
+path: 0 25 27 0 0 0 26 22 0 0 0 30 23 0 0 1 21 16 28 0 7 19 29 9 13 6 8 15 17 11 5 10 4 12 24 3 2 20 14 18 
+time: 6.35 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Insert
+Mutation prob.: 0.5
+fitness: 364.0
+path: 22 7 5 11 24 0 21 0 13 18 0 0 3 1 2 0 23 10 28 4 0 27 19 20 16 0 30 8 17 9 0 25 6 14 29 0 26 0 12 15 
+time: 6.29 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Scramble
+Mutation prob.: 0.5
+fitness: 340.0
+path: 0 25 27 22 0 0 26 0 0 0 0 21 1 23 0 0 30 4 29 0 7 2 15 9 18 5 19 16 12 24 6 10 28 14 11 3 8 20 17 13 
+time: 6.4 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.1
+fitness: 322.0
+path: 0 26 0 24 0 0 25 21 18 0 0 27 28 11 0 7 30 16 13 0 5 2 4 20 23 3 10 15 17 22 1 19 29 14 0 6 8 9 12 0 
+time: 5.9 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Inversion
+Mutation prob.: 0.1
+fitness: 346.0
+path: 30 0 10 2 0 26 5 19 4 0 27 3 8 16 0 25 7 20 28 0 0 23 17 15 13 0 21 1 9 11 0 22 6 29 24 0 0 14 12 18 
+time: 5.78 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.2
+fitness: 318.0
+path: 0 13 28 0 22 0 11 23 27 0 0 24 16 25 21 0 18 4 26 1 0 17 9 30 7 0 12 29 19 5 0 14 15 2 3 0 20 8 10 6 
+time: 5.09 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Inversion
+Mutation prob.: 0.2
+fitness: 340.0
+path: 0 13 28 21 0 0 11 16 26 0 0 24 1 25 0 0 18 4 30 0 0 17 9 19 5 27 12 29 2 7 22 14 15 10 3 23 20 6 8 0 
+time: 5.06 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.3
+fitness: 318.0
+path: 27 0 0 0 0 25 22 0 0 0 26 23 0 0 0 30 19 16 17 28 21 4 15 20 13 7 2 29 8 11 5 10 9 14 24 3 1 6 12 18 
+time: 4.98 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Inversion
+Mutation prob.: 0.3
+fitness: 320.0
+path: 27 0 0 13 0 25 23 28 11 0 26 22 16 24 0 30 21 4 18 0 19 2 15 20 0 7 10 29 17 0 8 5 9 14 0 6 3 1 12 0 
+time: 5.08 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 322.0
+path: 28 0 22 27 0 13 0 21 25 0 11 0 23 26 0 24 17 20 30 0 18 16 19 8 0 14 15 4 6 0 12 29 2 7 5 0 9 10 1 3 
+time: 5.0 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Inversion
+Mutation prob.: 0.4
+fitness: 320.0
+path: 0 0 27 23 25 0 28 17 22 26 0 0 20 2 30 0 16 15 4 19 0 13 29 10 21 0 11 9 1 7 0 24 12 8 5 0 18 14 6 3 
+time: 5.23 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.5
+fitness: 324.0
+path: 0 27 0 0 0 0 25 23 0 28 0 26 22 17 13 0 30 20 15 11 21 1 16 29 24 7 19 4 9 18 5 8 2 12 0 3 6 10 14 0 
+time: 5.17 min
+
+Population size:200
+Max generations:2000
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Inversion
+Mutation prob.: 0.5
+fitness: 358.0
+path: 0 0 0 0 0 26 30 21 23 0 25 22 16 0 0 27 19 0 20 28 8 10 4 17 13 7 2 15 0 11 6 3 29 14 24 1 5 9 12 18 
+time: 5.18 min

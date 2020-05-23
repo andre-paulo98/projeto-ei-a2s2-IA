@@ -1,0 +1,221 @@
+
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Insert
+Mutation prob.: 0.1
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 8.018 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Insert
+Mutation prob.: 0.2
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 7.955 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Scramble
+Mutation prob.: 0.1
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 7.922 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Insert
+Mutation prob.: 0.3
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 7.661 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Scramble
+Mutation prob.: 0.2
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 7.695 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Insert
+Mutation prob.: 0.4
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 7.66 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Scramble
+Mutation prob.: 0.3
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 7.697 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Insert
+Mutation prob.: 0.5
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 7.623 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Scramble
+Mutation prob.: 0.4
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 7.703 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Swap
+Mutation prob.: 0.1
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 9.552 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Scramble
+Mutation prob.: 0.5
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 10.519 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Swap
+Mutation prob.: 0.2
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 8.945 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Inversion
+Mutation prob.: 0.1
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 8.331 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Swap
+Mutation prob.: 0.3
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 9.025 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Inversion
+Mutation prob.: 0.2
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 9.545 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 10.491 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Inversion
+Mutation prob.: 0.3
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 10.404 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Swap
+Mutation prob.: 0.5
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 10.656 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Inversion
+Mutation prob.: 0.4
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 10.284 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.7
+Mutation:Inversion
+Mutation prob.: 0.5
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 9.923 s
