@@ -1,0 +1,32 @@
+Runs: 50
+
+Population size: 100
+
+Max generations: 6000
+
+//--------------------------------
+
+Selection: tournament
+
+Tournament size: 4
+
+//--------------------------------
+
+Recombination: pmx
+
+Recombination probability: 0.7
+
+//--------------------------------
+
+Mutation: swap
+
+Mutation probability: 0.4
+
+//--------------------------------
+
+Problem file: ./puzzle_8.txt
+
+//--------------------------------
+
+Statistic: BestIndividual
+Statistic: BestAverage
