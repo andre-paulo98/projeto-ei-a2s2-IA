@@ -8,7 +8,7 @@ Max generations: 1500
 
 Selection: tournament
 
-Tournament size: 1, 2
+Tournament size: 2, 4
 
 //--------------------------------
 

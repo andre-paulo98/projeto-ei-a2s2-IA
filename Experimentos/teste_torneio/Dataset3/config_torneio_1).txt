@@ -8,7 +8,8 @@ Max generations: 1500
 
 Selection: tournament
 
-Tournament size: 1, 2, 3
+Tournament size: 2, 4, 6
+
 //--------------------------------
 
 Recombination: cx
