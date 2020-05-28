@@ -1,0 +1,21 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:	Tempo:
+200	3500	Tournament(2)	PMX	0.5	Swap	0.4		156.0	9006.0
+200	3500	Tournament(2)	CX	0.5	Swap	0.4		158.0	9383.0
+200	3500	Tournament(2)	PMX	0.6	Swap	0.4		156.0	8698.0
+200	3500	Tournament(2)	CX	0.6	Swap	0.4		152.0	10125.0
+200	3500	Tournament(2)	PMX	0.7	Swap	0.4		150.0	9326.0
+200	3500	Tournament(2)	CX	0.7	Swap	0.4		162.0	10591.0
+200	3500	Tournament(2)	PMX	0.8	Swap	0.4		130.0	10085.0
+200	3500	Tournament(2)	CX	0.8	Swap	0.4		158.0	8499.0
+200	3500	Tournament(2)	PMX	0.9	Swap	0.4		188.0	10713.0
+200	3500	Tournament(2)	CX	0.9	Swap	0.4		142.0	10598.0
+200	3500	Tournament(2)	OX1	0.5	Swap	0.4		360.0	9790.0
+200	3500	Tournament(2)	VR	0.5	Swap	0.4		386.0	9334.0
+200	3500	Tournament(2)	OX1	0.6	Swap	0.4		384.0	9830.0
+200	3500	Tournament(2)	VR	0.6	Swap	0.4		408.0	9310.0
+200	3500	Tournament(2)	OX1	0.7	Swap	0.4		374.0	8392.0
+200	3500	Tournament(2)	VR	0.7	Swap	0.4		404.0	8910.0
+200	3500	Tournament(2)	OX1	0.8	Swap	0.4		386.0	10506.0
+200	3500	Tournament(2)	VR	0.8	Swap	0.4		414.0	9374.0
+200	3500	Tournament(2)	OX1	0.9	Swap	0.4		392.0	10238.0
+200	3500	Tournament(2)	VR	0.9	Swap	0.4		412.0	9457.0

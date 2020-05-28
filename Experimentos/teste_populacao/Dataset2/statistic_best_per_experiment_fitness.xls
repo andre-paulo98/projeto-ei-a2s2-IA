@@ -1,0 +1,5 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:	Tempo:
+400	1500	Tournament(2)	CX	0.8	Inversion	0.4		62.0	3543.0
+200	3000	Tournament(2)	CX	0.8	Inversion	0.4		58.0	4485.0
+800	750	Tournament(2)	CX	0.8	Inversion	0.4		62.0	4040.0
+100	6000	Tournament(2)	CX	0.8	Inversion	0.4		68.0	3607.0

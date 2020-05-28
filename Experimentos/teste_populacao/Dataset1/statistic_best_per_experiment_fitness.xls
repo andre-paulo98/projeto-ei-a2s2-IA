@@ -1,0 +1,5 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:	Tempo:
+100	150	Tournament(2)	OX1	0.8	Swap	0.4		84.0	78.0
+200	75	Tournament(2)	OX1	0.8	Swap	0.4		84.0	81.0
+400	37	Tournament(2)	OX1	0.8	Swap	0.4		84.0	51.0
+50	300	Tournament(2)	OX1	0.8	Swap	0.4		84.0	69.0

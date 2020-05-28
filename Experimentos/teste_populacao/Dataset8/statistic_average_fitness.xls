@@ -1,0 +1,5 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Average:	StdDev:	Time Best av:	Time Total av:
+200	3000	Tournament(4)	PMX	0.7	Swap	0.4		379.92	28.128163822048528	13685.22	17377.22
+100	6000	Tournament(4)	PMX	0.7	Swap	0.4		383.24	25.3705025571036	13875.22	17066.06
+400	1500	Tournament(4)	PMX	0.7	Swap	0.4		387.8	26.324893162176366	13328.82	17568.8
+800	750	Tournament(4)	PMX	0.7	Swap	0.4		396.16	25.820426022821547	13603.7	17466.44

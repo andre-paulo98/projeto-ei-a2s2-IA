@@ -1,0 +1,6 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Average:	StdDev:	Time Best av:	Time Total av:
+200	1500	Tournament(2)	CX	0.8	Swap	0.4		186.72	13.645570709941012	1737.06	3157.04
+200	1500	Tournament(8)	CX	0.8	Swap	0.4		187.16	14.577187657432416	1596.44	3401.36
+200	1500	Tournament(4)	CX	0.8	Swap	0.4		185.72	13.95426816425713	2401.88	4526.66
+200	1500	Tournament(10)	CX	0.8	Swap	0.4		193.8	15.274815874504023	2186.16	4622.56
+200	1500	Tournament(6)	CX	0.8	Swap	0.4		192.44	14.860901722304739	2240.84	4528.12

@@ -1,0 +1,6 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Average:	StdDev:	Time Best av:	Time Total av:
+200	2000	Tournament(2)	CX	0.8	Inversion	0.4		342.16	11.262965861619222	5513.66	7319.62
+200	2000	Tournament(8)	CX	0.8	Inversion	0.4		429.72	17.771932928075103	3299.12	7428.04
+200	2000	Tournament(4)	CX	0.8	Inversion	0.4		394.2	18.005554698481248	4678.0	7599.1
+200	2000	Tournament(10)	CX	0.8	Inversion	0.4		441.08	21.975295219859962	2193.38	7928.62
+200	2000	Tournament(6)	CX	0.8	Inversion	0.4		411.88	18.604988578335647	3696.08	7436.18

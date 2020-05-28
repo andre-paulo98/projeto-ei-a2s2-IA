@@ -1,0 +1,5 @@
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:	Tempo:
+200	2000	Tournament(4)	CX	0.8	Swap	0.4		2376.0	39371.0
+400	1000	Tournament(4)	CX	0.8	Swap	0.4		2352.0	32733.0
+50	8000	Tournament(4)	CX	0.8	Swap	0.4		2388.0	30162.0
+100	4000	Tournament(4)	CX	0.8	Swap	0.4		2370.0	39404.0
