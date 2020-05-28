@@ -14,7 +14,7 @@ Tournament size: 2
 
 Recombination: cx
 
-Recombination probability: 0.7, 0.8
+Recombination probability: 0.8
 
 //--------------------------------
 

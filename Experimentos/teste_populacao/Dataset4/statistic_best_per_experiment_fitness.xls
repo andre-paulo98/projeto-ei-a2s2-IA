@@ -3,7 +3,3 @@ Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:
 400	1000	Tournament(2)	CX	0.7	Inversion	0.4		322.0	5494.0
 800	500	Tournament(2)	CX	0.7	Inversion	0.4		320.0	8007.0
 100	4000	Tournament(2)	CX	0.7	Inversion	0.4		330.0	7501.0
-200	2000	Tournament(2)	CX	0.8	Inversion	0.4		320.0	5513.0
-400	1000	Tournament(2)	CX	0.8	Inversion	0.4		318.0	5867.0
-100	4000	Tournament(2)	CX	0.8	Inversion	0.4		314.0	6785.0
-800	500	Tournament(2)	CX	0.8	Inversion	0.4		310.0	5763.0
