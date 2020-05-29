@@ -1,6 +1,6 @@
-Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Fitness:	Tempo:
-200	3000	Tournament(2)	PMX	0.7	Swap	0.4		360.0	13968.0
-200	3000	Tournament(6)	PMX	0.7	Swap	0.4		342.0	13806.0
-200	3000	Tournament(4)	PMX	0.7	Swap	0.4		308.0	13445.0
-200	3000	Tournament(8)	PMX	0.7	Swap	0.4		302.0	13466.0
-200	3000	Tournament(10)	PMX	0.7	Swap	0.4		332.0	15875.0
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob,:	Mutation:	Mutation prob,:		Fitness:	Tempo:
+200	3000	Tournament(2)	PMX	0,7	Swap	0,4		360,0	13968,0
+200	3000	Tournament(6)	PMX	0,7	Swap	0,4		342,0	13806,0
+200	3000	Tournament(4)	PMX	0,7	Swap	0,4		308,0	13445,0
+200	3000	Tournament(8)	PMX	0,7	Swap	0,4		302,0	13466,0
+200	3000	Tournament(10)	PMX	0,7	Swap	0,4		332,0	15875,0

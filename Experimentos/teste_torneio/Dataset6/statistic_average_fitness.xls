@@ -1,6 +1,6 @@
-Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Average:	StdDev:	Time Best av:	Time Total av:
-200	2000	Tournament(6)	PMX	0.8	Swap	0.4		786.96	19.868527877021997	7277.4	12320.98
-200	2000	Tournament(2)	PMX	0.8	Swap	0.4		768.44	16.734586938433832	10252.6	12731.26
-200	2000	Tournament(10)	PMX	0.8	Swap	0.4		784.6	19.739300899474628	7055.3	12546.26
-200	2000	Tournament(8)	PMX	0.8	Swap	0.4		789.72	20.84614112971511	6955.52	11668.06
-200	2000	Tournament(4)	PMX	0.8	Swap	0.4		781.68	20.08525827566078	6368.1	11620.18
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob,:	Mutation:	Mutation prob,:		Average:	StdDev:	Time Best av:	Time Total av:
+200	2000	Tournament(6)	PMX	0,8	Swap	0,4		786,96	19,868527877021997	7277,4	12320,98
+200	2000	Tournament(2)	PMX	0,8	Swap	0,4		768,44	16,734586938433832	10252,6	12731,26
+200	2000	Tournament(10)	PMX	0,8	Swap	0,4		784,6	19,739300899474628	7055,3	12546,26
+200	2000	Tournament(8)	PMX	0,8	Swap	0,4		789,72	20,84614112971511	6955,52	11668,06
+200	2000	Tournament(4)	PMX	0,8	Swap	0,4		781,68	20,08525827566078	6368,1	11620,18

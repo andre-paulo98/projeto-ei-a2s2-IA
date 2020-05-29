@@ -1,6 +1,6 @@
-Population size:	Max generations:	Selection:	Recombination:	Recombination prob.:	Mutation:	Mutation prob.:		Average:	StdDev:	Time Best av:	Time Total av:
-200	150	Tournament(2)	OX1	0.8	Swap	0.4		85.08	1.1461239025515522	51.26	108.06
-200	150	Tournament(4)	OX1	0.8	Swap	0.4		85.84	2.1850400453996257	12.94	105.08
-200	150	Tournament(8)	OX1	0.8	Swap	0.4		86.68	2.641514716975848	9.5	111.9
-200	150	Tournament(6)	OX1	0.8	Swap	0.4		85.92	2.115088650624366	8.8	106.56
-200	150	Tournament(10)	OX1	0.8	Swap	0.4		86.92	2.5047155527125247	5.24	109.78
+Population size:	Max generations:	Selection:	Recombination:	Recombination prob,:	Mutation:	Mutation prob,:		Average:	StdDev:	Time Best av:	Time Total av:
+200	150	Tournament(2)	OX1	0,8	Swap	0,4		85,08	1,1461239025515522	51,26	108,06
+200	150	Tournament(4)	OX1	0,8	Swap	0,4		85,84	2,1850400453996257	12,94	105,08
+200	150	Tournament(8)	OX1	0,8	Swap	0,4		86,68	2,641514716975848	9,5	111,9
+200	150	Tournament(6)	OX1	0,8	Swap	0,4		85,92	2,115088650624366	8,8	106,56
+200	150	Tournament(10)	OX1	0,8	Swap	0,4		86,92	2,5047155527125247	5,24	109,78
