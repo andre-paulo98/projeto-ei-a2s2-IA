@@ -3,167 +3,134 @@
 Population size:200
 Max generations:150
 Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Insert
-Mutation prob.: 0.1
-fitness: 84.0
-path: 5 7 6 3 4 0 1 2 8 
-time: 8.018 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Insert
-Mutation prob.: 0.2
-fitness: 84.0
-path: 5 7 6 3 4 0 1 2 8 
-time: 7.955 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Scramble
-Mutation prob.: 0.1
-fitness: 84.0
-path: 5 7 6 3 4 0 1 2 8 
-time: 7.922 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Insert
-Mutation prob.: 0.3
-fitness: 84.0
-path: 5 7 6 3 4 0 1 2 8 
-time: 7.661 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Scramble
-Mutation prob.: 0.2
-fitness: 84.0
-path: 5 7 6 3 4 0 1 2 8 
-time: 7.695 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Insert
-Mutation prob.: 0.4
-fitness: 84.0
-path: 3 7 6 5 4 0 1 2 8 
-time: 7.66 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Scramble
-Mutation prob.: 0.3
-fitness: 84.0
-path: 5 7 6 3 4 0 1 2 8 
-time: 7.697 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Insert
-Mutation prob.: 0.5
-fitness: 84.0
-path: 3 7 6 5 4 0 1 2 8 
-time: 7.623 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Scramble
+Recombination:PMX
+Recombination prob.: 0.5
+Mutation:Swap
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
-time: 7.703 s
+time: 5.393 s
 
 Population size:200
 Max generations:150
 Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
+Recombination:PMX
+Recombination prob.: 0.6
 Mutation:Swap
-Mutation prob.: 0.1
+Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
-time: 9.552 s
+time: 5.272 s
 
 Population size:200
 Max generations:150
 Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Scramble
-Mutation prob.: 0.5
-fitness: 84.0
-path: 3 7 6 5 4 0 1 2 8 
-time: 10.519 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
+Recombination:PMX
 Recombination prob.: 0.7
 Mutation:Swap
-Mutation prob.: 0.2
+Mutation prob.: 0.4
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 5.392 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.5
+Mutation:Swap
+Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
-time: 8.945 s
+time: 5.454 s
 
 Population size:200
 Max generations:150
 Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Inversion
-Mutation prob.: 0.1
+Recombination:PMX
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
-time: 8.331 s
+time: 5.418 s
 
 Population size:200
 Max generations:150
 Selection:Tournament(2)
-Recombination:OX1
+Recombination:CX
+Recombination prob.: 0.6
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 5.248 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:PMX
+Recombination prob.: 0.9
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 5.526 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:CX
 Recombination prob.: 0.7
 Mutation:Swap
-Mutation prob.: 0.3
+Mutation prob.: 0.4
 fitness: 84.0
-path: 3 7 6 5 4 0 1 2 8 
-time: 9.025 s
+path: 5 7 6 3 4 0 1 2 8 
+time: 5.407 s
 
 Population size:200
 Max generations:150
 Selection:Tournament(2)
 Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Inversion
-Mutation prob.: 0.2
+Recombination prob.: 0.5
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 5.819 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
-time: 9.545 s
+time: 5.613 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.6
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 5.744 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:CX
+Recombination prob.: 0.9
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 3 7 6 5 4 0 1 2 8 
+time: 5.843 s
 
 Population size:200
 Max generations:150
@@ -174,48 +141,81 @@ Mutation:Swap
 Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
-time: 10.491 s
+time: 6.102 s
 
 Population size:200
 Max generations:150
 Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Inversion
-Mutation prob.: 0.3
-fitness: 84.0
-path: 5 7 6 3 4 0 1 2 8 
-time: 10.404 s
-
-Population size:200
-Max generations:150
-Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
+Recombination:VR
+Recombination prob.: 0.5
 Mutation:Swap
-Mutation prob.: 0.5
+Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
-time: 10.656 s
+time: 6.053 s
 
 Population size:200
 Max generations:150
 Selection:Tournament(2)
-Recombination:OX1
-Recombination prob.: 0.7
-Mutation:Inversion
+Recombination:VR
+Recombination prob.: 0.6
+Mutation:Swap
 Mutation prob.: 0.4
 fitness: 84.0
 path: 5 7 6 3 4 0 1 2 8 
-time: 10.284 s
+time: 5.935 s
 
 Population size:200
 Max generations:150
 Selection:Tournament(2)
 Recombination:OX1
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 6.097 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:VR
 Recombination prob.: 0.7
-Mutation:Inversion
-Mutation prob.: 0.5
+Mutation:Swap
+Mutation prob.: 0.4
 fitness: 84.0
 path: 3 7 6 5 4 0 1 2 8 
-time: 9.923 s
+time: 5.823 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:OX1
+Recombination prob.: 0.9
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 6.015 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:VR
+Recombination prob.: 0.8
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 5.527 s
+
+Population size:200
+Max generations:150
+Selection:Tournament(2)
+Recombination:VR
+Recombination prob.: 0.9
+Mutation:Swap
+Mutation prob.: 0.4
+fitness: 84.0
+path: 5 7 6 3 4 0 1 2 8 
+time: 5.483 s
