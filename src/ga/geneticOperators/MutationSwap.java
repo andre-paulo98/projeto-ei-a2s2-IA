@@ -6,28 +6,32 @@ import ga.Problem;
 
 public class MutationSwap<I extends IntVectorIndividual, P extends Problem<I>> extends Mutation<I, P> {
 
-    public MutationSwap(double probability) {
-        super(probability);
-    }
+	public MutationSwap(double probability) {
+		super(probability);
+	}
 
-    @Override
-    public void mutate(I ind) { // TODO fazer código como se tivesse sido nós a fazer
-        int[] array = ind.getGenome();
-        int l = array.length;
-        //get 2 random integers between 0 and size of array
-        int r1 = GeneticAlgorithm.randomNumber(0,l);
-        int r2 = GeneticAlgorithm.randomNumber(0,l);
-        //to make sure the 2 numbers are different
-        while(r1 == r2) r2 = GeneticAlgorithm.randomNumber(0,l);
+	@Override
+	public void mutate(I ind) {
+		int[] array = ind.getGenome();
+		int length = array.length;
 
-        //swap array elements at those indices
-        int temp = array[r1];
-        ind.setGene(r1,array[r2]);
-        ind.setGene(r2, temp);
-    }
+        // gerar 2 números aleatórios
+		int num1 = GeneticAlgorithm.randomNumber(0, length);
+		int num2 = GeneticAlgorithm.randomNumber(0, length);
 
-    @Override
-    public String toString() {
-        return "Swap";
-    }
+        // confirmar que num1 é diferente que num2 (para podermos trocar)
+		while (num1 == num2) {
+            num2 = GeneticAlgorithm.randomNumber(0, length);
+        };
+
+		//trocar os valores
+		int temp = array[num1];
+		ind.setGene(num1, array[num2]);
+		ind.setGene(num2, temp);
+	}
+
+	@Override
+	public String toString() {
+		return "Swap";
+	}
 }

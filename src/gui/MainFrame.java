@@ -503,14 +503,7 @@ public class MainFrame extends JFrame implements GAListener, ExperimentIndividua
 				URL mUrl = null;
 				try {
 					mUrl = new URL("https://webhook.andrepaulo.me/inteligencia-artificial-progress-v2.php?e="+selectedPuzzle+"&s="+startedHour+"&f="+finishedTime+"&c="+selectedConfig);
-					//mUrl = new URL("https://webhook.site/6420636f-2710-4922-822e-283a8d9ff95d");
-
 					urlConn = (HttpURLConnection) mUrl.openConnection();
-					//urlConn.setDoOutput(true);
-					//String query = "{\"embeds\":[{\"description\": \"Experiment: "+selectedPuzzle+"\\nStarted At: "+startedHour+"\\nFinished At: "+finishedTime+"\"}]}";
-					//urlConn.addRequestProperty("Content-Type", "application/json");
-                    //urlConn.setRequestProperty("Content-Length", Integer.toString(query.length()));
-                    //urlConn.getOutputStream().write(query.getBytes("UTF8"));
                     InputStream stream = urlConn.getErrorStream();
                     if(stream == null) {
 	                    stream = urlConn.getInputStream();
