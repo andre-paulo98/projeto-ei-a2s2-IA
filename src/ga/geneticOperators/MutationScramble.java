@@ -21,13 +21,11 @@ public class MutationScramble<I extends IntVectorIndividual, P extends Problem<I
 			num2 = GeneticAlgorithm.randomNumber(0, length);
 		} while (num1 >= num2); // gerar 2 números aleatórios, enquanto que num1 >= num2
 
-		// TODO trocar comentários
-		//this code scrambles (i.e. randomises) elements between num1..num2
+		// para cada elemento dentro do corte
 		for (int i = num1; i < num2; i++) {
-			//int i1 = GeneticAlgorithm.randomNumber(num1, num2 + 1);// add 1 to include actual value of num2
-			int randomPosition = GeneticAlgorithm.randomNumber(num1, num2 + 1);// see comments on method Utility.randomNumber
-			int a = ind.getGene(i); //array[i1];
-			ind.setGene(i, ind.getGene(randomPosition));
+			int randomPosition = GeneticAlgorithm.randomNumber(num1, num2 + 1); // obter a posição que o elemento i vai trocar com
+			int a = ind.getGene(i); // guardar o número da posição i
+			ind.setGene(i, ind.getGene(randomPosition)); // trocar os números do genome[i] por genome[randomPosition]
 			ind.setGene(randomPosition, a);
 		}
 	}

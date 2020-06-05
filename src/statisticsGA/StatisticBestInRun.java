@@ -11,7 +11,6 @@ public class StatisticBestInRun<I extends Individual, P extends Problem<I>> impl
 
 	private I bestInExperiment;
 
-	// TODO mostrar o melhor tempo (está alguma coisa mal, pois to bestInExperiment.getTempo() está a 0
 	public StatisticBestInRun(String experimentHeader) {
 		File file = new File("statistic_best_per_experiment_fitness.xls");
 		if (!file.exists()) {
