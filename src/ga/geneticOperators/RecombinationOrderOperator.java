@@ -39,10 +39,8 @@ public class RecombinationOrderOperator<I extends IntVectorIndividual, P extends
             child2[i] = i2[i];
         }
 
-        // fill rest of child1
         fillArray(child1, i2);
 
-        // fill rest of child2
         fillArray(child2, i1);
 
         for (int i = 0; i < ind1.getNumGenes(); i++) {
