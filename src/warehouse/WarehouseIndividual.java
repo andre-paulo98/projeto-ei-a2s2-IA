@@ -3,10 +3,6 @@ package warehouse;
 import ga.GeneticAlgorithm;
 import ga.IntVectorIndividual;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-
 public class WarehouseIndividual extends IntVectorIndividual<WarehouseProblemForGA, WarehouseIndividual> {
 
     private WarehouseProblemForGA problem;
