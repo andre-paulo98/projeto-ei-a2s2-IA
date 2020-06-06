@@ -1,5 +1,0 @@
-Population size:	Max generations:	Selection:	Recombination:	Recombination prob,:	Mutation:	Mutation prob,:		Fitness:	Tempo:
-p200	g1500	Tournament(4)	PMX	0,8	Swap	0,4		2720,0	22103,0
-p400	g750	Tournament(4)	PMX	0,8	Swap	0,4		2720,0	22267,0
-p100	g3000	Tournament(4)	PMX	0,8	Swap	0,4		2682,0	21966,0
-p800	g375	Tournament(4)	PMX	0,8	Swap	0,4		2668,0	22345,0
